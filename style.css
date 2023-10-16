@@ -1,5 +1,9 @@
 html {
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
 }
 
 body {
@@ -8,12 +12,14 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: 0 auto;
+    
+    margin: 0;
+    padding: 0;
 }
 
 .header {
     display: flex;
-    background-color: #325E99;
+    background-color: #434B99;
     width: 100%;
     height: 50px;
     flex-direction: row;
@@ -21,7 +27,7 @@ body {
     justify-content: space-between;
     top: 0;
     left: 0;
-    position: fixed;
+    /* position: fixed; */
     color: white;
     z-index: 2;
 }
@@ -80,44 +86,59 @@ h5 {
 }
 
 .title {
-    background-image: url(./img/title.png);
+    background-image: url(./images/wwhna-logo-row-orange.png);
     background-repeat: no-repeat;
+    background-color: #EB5F0A;
     background-position: top;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     height: 500px;
     margin: 0;
     color: white;
-    padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     box-shadow: 0 0 5px gray;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-.main-title {
-    text-shadow: 2px 3px 8px rgb(0 0 0 / 66%);
-    margin-top: 150px;
-}
 
-button {
-    background: #325E99;
+.order-link {
+    background: #B90D0D;
     font-size: 22px;
     line-height: 22px;
     padding: 15px;
+    margin-top: 26rem;
     border-radius: 7px;
-    border: #325E99;
+    border: #434B99;
     font-family: 'montserrat';
     text-decoration: none;
-    box-shadow: 0 0 10px black;
+    box-shadow: -3px 8px black;
 }
 
-a {
-    color: white;
+.order-link a {
+    color: #ffd52d;
     text-decoration: none;
 }
 
+@media screen and (max-width: 850px) {
+    .title {
+        background-image:url(./images/wwhna-logo-square-orange.png);
+        background-color: #EB5F0A;
+        background-size: contain;
+        padding-bottom: 50px;
+    }
+    .order-link{
+        margin-top: 30rem;
+    }
+  
+
+}
+/* 
 .philosophy {
     display: flex;
     justify-content: center;
@@ -360,4 +381,4 @@ a {
     .contact h3 {
         text-align: center;
     }
-}
+} */
