@@ -55,39 +55,42 @@ li {
     color: white;
 }
 
-@media only screen and (max-width: 1148px) {
+@media only screen and (max-width: 850px) {
     ul {
         display: none;
     }
 }
 
-@media only screen and (max-width: 1148px)and (min-width: 350px) {
-    .title {
-        height: 800px;
-    }
-}
 
 h1 {
-    font-family: 'Montserrat';
+    
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
 
 h2 {
-    font-family: 'Montserrat';
+    
     font-style: italic;
     text-align: center;
     text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.66);
 }
 
 h3 {
-    font-family: 'Montserrat';
-    font-size: 1.5rem;
+    align-self: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+}
+
+h4 {
+    font-family: 'Open Sans';
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 20px;
 }
 
 h5 {
-    font-family: 'inter';
+    font-family: 'Open Sans';
     font-size: 1rem;
 }
 
@@ -165,12 +168,42 @@ h5 {
         padding-bottom: 20px;
         margin-left: 20px;
     }
+
+    .card-examples {
+        display: flex;
+        flex-flow: column;
+    }
 }
 
 .Activism {
     display: flex;
     justify-content: center;
     flex-flow: column;
+}
+
+.Science {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.Goddesses {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.Art {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+
+.card-examples {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
 }
 .card {
     perspective: 1500px; 
@@ -180,6 +213,7 @@ h5 {
     margin: 0 20px 20px 0; /* Added margin for spacing between cards */
     display: inline-block; 
 }
+
 
 .card-face {
     width: 100%;
