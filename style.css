@@ -1,0 +1,363 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    background-color: #325E99;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    position: fixed;
+    color: white;
+    z-index: 2;
+}
+
+.header h3 {
+    margin-left: 30px;
+    font-size: 1rem;
+}
+
+li {
+    display: inline;
+    vertical-align: baseline;
+    font-family: 'montserrat';
+    margin-right: 30px;
+    text-decoration: underline;
+}
+
+.navigation li a {
+    color: white;
+}
+
+@media only screen and (max-width: 1148px) {
+    ul {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1148px)and (min-width: 350px) {
+    .title {
+        height: 800px;
+    }
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Montserrat';
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.66);
+}
+
+h3 {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-family: 'inter';
+    font-size: 1rem;
+}
+
+.title {
+    background-image: url(./img/title.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px gray;
+}
+
+.main-title {
+    text-shadow: 2px 3px 8px rgb(0 0 0 / 66%);
+    margin-top: 150px;
+}
+
+button {
+    background: #325E99;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 15px;
+    border-radius: 7px;
+    border: #325E99;
+    font-family: 'montserrat';
+    text-decoration: none;
+    box-shadow: 0 0 10px black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.philosophy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    padding: 3rem;
+}
+
+.phil-text {
+    width: 50%;
+}
+
+.philosophy img {
+    width: 25%;
+    margin-left: 20px;
+    box-shadow: 0 0 5px gray;
+}
+
+@media only screen and (max-width: 1148px) and (min-width: 450px) {
+
+    .phil-text {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .philosophy img {
+        width: 50%;
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+
+}
+
+.mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    flex-direction: row-reverse;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 3rem;
+}
+
+.mission-txt {
+    width: 50%;
+}
+
+.mission img {
+    width: 25%;
+    margin-right: 20px;
+    box-shadow: 0 0 5px gray;
+}
+
+@media only screen and (max-width: 1148px) and (min-width: 450px) {
+
+    .mission-txt {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .mission img {
+        width: 50%;
+    }
+
+}
+
+.classes-heading {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.classes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.english-img {
+    background-image: url(./img/English.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 50px;
+    padding: 150px;
+}
+
+.english {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    box-shadow: 0 0 5px gray;
+}
+
+.reading-img {
+    background-image: url(./img/reading.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    padding: 150px;
+}
+
+.reading {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    box-shadow: 0 0 5px gray;
+
+}
+
+.consulting {
+    margin-top: 2rem;
+    margin-right: 20px;
+    box-shadow: 0 0 5px gray;
+}
+
+.consulting-img {
+    background-image: url(./img/consulting.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    padding: 150px;
+}
+
+.coding-img {
+    background-image: url(./img/coding.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    padding: 150px;
+}
+
+.coding {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px gray;
+}
+
+.classes h5 {
+    margin: 1rem 1rem;
+}
+
+.classes h3 {
+    text-align: center;
+}
+
+.meet-Lurie {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 3rem;
+}
+
+.lurie-img {
+    background-image: url(./img/lurie_headshots_2018-0003_Original.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    padding: 200px;
+    margin: 20px;
+    box-shadow: 0 0 5px gray;
+}
+
+.about {
+    width: 40%;
+}
+
+@media only screen and (max-width: 1148px) and (min-width: 450px) {
+    .meet-Lurie {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about {
+        width: 75%;
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0px;
+    width: 100%;
+    padding: 3rem;
+    background-color: #325E99;
+    background-size: cover;
+    color: white
+}
+
+.contact a {
+    width: 10%;
+    color: #325E99;
+    text-align: center;
+    background: white;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 15px;
+    border-radius: 7px;
+    border: white;
+    font-family: 'montserrat';
+    text-decoration: none;
+    box-shadow: 0 0 5px black;
+}
+
+.contact h3 {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1148px) and (min-width: 450px) {
+    .classes {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        align-content: center;
+    }
+
+    .coding {
+        margin-right: 20px;
+    }
+
+    .contact a {
+        width: 30%;
+    }
+
+    .contact h3 {
+        text-align: center;
+    }
+}
