@@ -27,7 +27,7 @@ body {
     display: flex;
     background-color: #434B99;
     width: 100%;
-    height: 50px;
+    height: 100px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -160,22 +160,6 @@ h5 {
     padding-bottom: 20px;
 }
 
-@media screen and (max-width: 850px) {
-    .about-heading{
-        font-size: 3rem;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-left: 10%;
-        margin-right: 10%;
-        
-    }
-
-    .card-examples {
-        display: flex;
-        flex-flow: column;
-    }
-}
-
 .Activism,
 .Science,
 .Goddesses,
@@ -254,7 +238,22 @@ h5 {
     height: 100%;
     object-fit: cover; 
 }
+@media screen and (max-width: 850px) {
+    .about-heading{
+        font-size: 3rem;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        
+    }
 
+    .card-examples {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
 
 /*
 .philosophy {
