@@ -165,12 +165,10 @@ h5 {
     
 }
 
-#about-container{
-
-}
-
-#about{
-    
+.about-heading, h4,h3, .card-examples {
+    opacity: 0;
+    transition: opacity 1s, transform 1s; 
+    transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
 }
 
 .about-heading{
