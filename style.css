@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Philly Sans"; 
+    src: url("./philly_sans.woff") ;
+
+}
+
 html {
     font-size: 16px;
     margin: 0;
@@ -35,14 +41,14 @@ body {
 .header h3 {
     margin-left: 30px;
     font-size: 1rem;
+    font-family: "Philly Sans";
 }
 
 li {
     display: inline;
     vertical-align: baseline;
-    font-family: 'montserrat';
+    font-family: 'Open Sans', sans-serif;
     margin-right: 30px;
-    text-decoration: underline;
 }
 
 .navigation li a {
@@ -108,20 +114,19 @@ h5 {
 
 
 .order-link {
-    background: #B90D0D;
+    background: white;
     font-size: 22px;
     line-height: 22px;
     padding: 15px;
     margin-top: 26rem;
-    border-radius: 7px;
-    border: #434B99;
-    font-family: 'montserrat';
+    border: white;
+    font-family: 'Philly Sans';
     text-decoration: none;
-    box-shadow: -3px 8px black;
+    box-shadow: 10px 8px black;
 }
 
 .order-link a {
-    color: #ffd52d;
+    color: black;
     text-decoration: none;
 }
 
