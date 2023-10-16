@@ -40,19 +40,31 @@ body {
 
 .header h3 {
     margin-left: 30px;
-    font-size: 1rem;
+    font-size: 2rem;
     font-family: "Philly Sans";
+    text-shadow: 4px 4px black;
+}
+
+.header ul {
+    align-self: center;
 }
 
 li {
     display: inline;
     vertical-align: baseline;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Philly Sans';
+    font-size: 20px;
     margin-right: 30px;
+
 }
 
 .navigation li a {
     color: white;
+    text-decoration: none;
+}
+
+.navigation li a:hover {
+    text-shadow: 4px 4px black;
 }
 
 @media only screen and (max-width: 850px) {
@@ -150,6 +162,14 @@ h5 {
 /* Card examples  */
 
 .about {
+    
+}
+
+#about-container{
+
+}
+
+#about{
     
 }
 
