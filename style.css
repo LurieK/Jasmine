@@ -145,11 +145,40 @@ h5 {
 }
 
 /* Card examples  */
+
+.about {
+    
+}
+
+.about-heading{
+    font-family: "Philly Sans";
+    font-size: 4rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 850px) {
+    .about-heading{
+        font-size: 3rem;
+        margin-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 20px;
+    }
+}
+
+.Activism {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
 .card {
     perspective: 1500px; 
     width: 300px; 
     height: 300px;
     position: relative;
+    margin: 0 20px 20px 0; /* Added margin for spacing between cards */
+    display: inline-block; 
 }
 
 .card-face {
@@ -177,6 +206,8 @@ h5 {
     height: 100%;
     object-fit: cover; 
 }
+
+
 /*
 .philosophy {
     display: flex;
