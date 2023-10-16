@@ -138,10 +138,10 @@ h5 {
         background-image:url(./images/wwhna-logo-square-orange.png);
         background-color: #EB5F0A;
         background-size: contain;
-        padding-bottom: 50px;
+        padding-bottom: 25%;
     }
     .order-link{
-        margin-top: 30rem;
+        margin-top: 100%;
     }
   
 
@@ -163,10 +163,11 @@ h5 {
 @media screen and (max-width: 850px) {
     .about-heading{
         font-size: 3rem;
-        margin-right: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
-        margin-left: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        
     }
 
     .card-examples {
@@ -175,24 +176,9 @@ h5 {
     }
 }
 
-.Activism {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-}
-
-.Science {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-}
-
-.Goddesses {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-}
-
+.Activism,
+.Science,
+.Goddesses,
 .Art {
     display: flex;
     justify-content: center;
@@ -200,12 +186,20 @@ h5 {
 }
 
 
+
 .card-examples {
     display: flex;
     justify-content: center;
     flex-flow: row;
 }
-.card {
+.card1-Activism,
+.card1-Science,
+.card1-Goddesses,
+.card1-Art,
+.card2-Activism,
+.card2-Science,
+.card2-Goddesses,
+.card2-Art{
     perspective: 1500px; 
     width: 300px; 
     height: 300px;
@@ -227,11 +221,31 @@ h5 {
     transform: rotateY(180deg); 
 }
 
-.card:hover .front {
+.card1-Activism:hover .front,
+.card1-Science:hover .front,
+.card1-Goddesses:hover .front,
+.card1-Art:hover .front{
     transform: rotateY(180deg); 
 }
 
-.card:hover .back {
+.card1-Activism:hover .back,
+.card1-Science:hover .back,
+.card1-Goddesses:hover .back,
+.card1-Art:hover .back{
+    transform: rotateY(360deg); 
+}
+
+.card2-Activism:hover .front,
+.card2-Science:hover .front,
+.card2-Goddesses:hover .front,
+.card2-Art:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.card2-Activism:hover .back,
+.card2-Science:hover .back,
+.card2-Goddesses:hover .back,
+.card2-Art:hover .back{
     transform: rotateY(360deg); 
 }
 
