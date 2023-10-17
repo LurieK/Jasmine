@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(entry.target.className)
                 entry.target.style.opacity = '1';
                 if (entry.target.classList.contains('woman-img')) {
+                    console.log("running woman-img animation")
                     entry.target.style.transform = 'translateX(0)';
                 } else {
+                    console.log('animating other classes')
                     entry.target.style.transform = 'translateY(0)';
                 }
                 observer.unobserve(entry.target);
