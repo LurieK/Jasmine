@@ -115,17 +115,15 @@ h5 {
     position:relative;
     width: 100%;
     height: 500px;
-    padding-bottom: 3%;
+    
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    
+   
     box-shadow: 0 0 5px gray;
   
 }
 
-.title-img{
+/* .title-img{
     display:flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -134,21 +132,25 @@ h5 {
     width: 100%;
     height: 100%;
     
-}
+} */
+
 
 .woman-img {
-    display:flex;
-    justify-content: center;
-    align-items: flex-end;
+    position:absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    width: calc(25% + 2vw);
+    height: 100%;
+    opacity: 0; 
+    transform: translateX(-100%);
+
 }
 
-.woman-img img {
+/* .woman-img img {
     width:50%;
     margin:0 1%;
     padding: 0;
-}
+} */
 
 .woman-img img:first-child {
     position: absolute;

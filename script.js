@@ -1,13 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
 
-    const elementsToAnimate = document.querySelectorAll('.about-heading, h4, h3, .card-examples');
+    const elementsToAnimate = document.querySelectorAll('.woman-img, .about-heading, h4, h3, .card-examples');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-
+                console.log(entry.target.className)
                 entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                if (entry.target.classList.contains('woman-img')) {
+                    entry.target.style.transform = 'translateX(0)';
+                } else {
+                    entry.target.style.transform = 'translateY(0)';
+                }
                 observer.unobserve(entry.target);
             }
         });
@@ -18,4 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     elementsToAnimate.forEach(element => {
         observer.observe(element);
     });
+
+    
 });
+
+
