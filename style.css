@@ -159,7 +159,7 @@ h5 {
     bottom: 0;
     left: 3%;
     width: 25%;
-    /* z-index: 2; */
+    z-index: 2;
 }
 
 .woman-img img:nth-child(2) {
@@ -167,7 +167,7 @@ h5 {
     bottom: 18%;
     left: 10%;
     width: 25%;
-    /* z-index: 1; */
+    z-index: 1;
 }
 
 .woman-img img:nth-child(3) {
@@ -175,7 +175,7 @@ h5 {
     bottom: 0;
     left: 17%;
     width: 25%;
-    /* z-index: 3; */
+    z-index: 3;
 }
 
 .text-img {
