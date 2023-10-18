@@ -205,7 +205,7 @@ h5 {
 }
 
 .rosa.startTilt {
-    animation: tiltRosa 1s infinite alternate;
+    animation: tiltRosa 1s infinite;
 }
 
 .lux.startTilt {
