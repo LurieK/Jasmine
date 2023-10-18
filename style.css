@@ -111,12 +111,15 @@ h5 {
     background-color: #EB5F0A;
     background-position: top;
     background-size: cover;
-    position:relative;
+    /* position:relative; */
     width: 100%;
     height: 500px;
-    padding-top: 40px;
+    padding-top: 10%;
     color: white;
     box-shadow: 0 0 5px gray;
+
+    display:flex;
+    flex-flow: row;
   
 }
 
@@ -124,11 +127,11 @@ h5 {
 
 /* Container holding images of three women */
 .woman-img {
-    position:absolute;
+    /* position:absolute; */
     /* background-color: red; for debugging */
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     opacity: 0; 
     transform: translateX(-100px); 
@@ -137,31 +140,31 @@ h5 {
 } 
 
 .woman-img img {
-    width:50%;
+ 
     margin:0 1%;
     padding: 0;
 } 
 .woman-img img:first-child {
     position: absolute;
     bottom: 0;
-    left: 3%;
-    width: 25%;
+    left: 0;
+    width: 85%;
     z-index: 2;
 }
 
 .woman-img img:nth-child(2) {
     position: absolute;
-    bottom: 18%;
-    left: 10%;
-    width: 25%;
+    bottom: 20%;
+    left: 17%;
+    width: 85%;
     z-index: 1;
 }
 
 .woman-img img:nth-child(3) {
     position: absolute;
     bottom: 0;
-    left: 17%;
-    width: 25%;
+    left: 40%;
+    width: 83%;
     z-index: 3;
 }
 
@@ -169,7 +172,8 @@ h5 {
     display:flex;
     flex-flow: column;
     width: 75%;
-    margin-left: 30%;
+    /* padding-top: 10%; */
+    /* margin-left: 30%; */
 
 }
 
@@ -200,19 +204,20 @@ h5 {
 
 @media screen and (max-width: 850px) {
     .title {
-        background-image: none;
+        background-image: url(./images/background.jpg);
+        background-position: cover;
         background-color: #EB5F0A;
-        background-size: contain;
+        background-size: 200%;
         padding-bottom: 25%;
     }
     .order-link{
-        margin-top: 100%;
+        
     }
 
     .woman-img img:first-child {
         position: absolute;
         bottom: 0;
-        left: 23%;
+        left: 0;
         width: 50%;
         z-index: 3;
     }
@@ -232,6 +237,17 @@ h5 {
         width: 50%;
         z-index: 3;
 
+    }
+
+    .title-text{
+        margin-top: 40px;
+    
+    }
+    
+    .text-img {
+        width: 100%;
+        
+    }
 }
 
 /* Card examples  */
