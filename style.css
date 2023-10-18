@@ -126,8 +126,9 @@ h5 {
 
 
 /* Container holding images of three women */
+
 .woman-img {
-    /* position:absolute; */
+    position:relative;
     /* background-color: red; for debugging */
     left: 0;
     bottom: 0;
@@ -144,6 +145,16 @@ h5 {
     margin:0 1%;
     padding: 0;
 } 
+
+@keyframes tiltGreta {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(5deg); 
+    }
+}
+
 .woman-img img:first-child {
     position: absolute;
     bottom: 0;
@@ -151,6 +162,17 @@ h5 {
     width: 85%;
     z-index: 2;
 }
+
+@keyframes tiltRosa {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(-5deg); 
+    }
+   
+}
+
 
 .woman-img img:nth-child(2) {
     position: absolute;
@@ -160,6 +182,16 @@ h5 {
     z-index: 1;
 }
 
+@keyframes tiltLux {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(-5deg); 
+    }
+}
+
+
 .woman-img img:nth-child(3) {
     position: absolute;
     bottom: 0;
@@ -167,6 +199,19 @@ h5 {
     width: 83%;
     z-index: 3;
 }
+
+.greta.startTilt {
+    animation: tiltGreta 1s infinite;
+}
+
+.rosa.startTilt {
+    animation: tiltRosa 1s infinite alternate;
+}
+
+.lux.startTilt {
+    animation: tiltLux 1s infinite;
+}
+
 
 .title-text{
     display:flex;
@@ -204,12 +249,22 @@ h5 {
 
 @media screen and (max-width: 850px) {
     .title {
-        background-image: url(./images/background.jpg);
-        background-position: cover;
+        background-image: url(./images/wwhna-logo-grid-profile-orange\ \(1\).png);
+        background-size: contain;
+        background-position: bottom;
         background-color: #EB5F0A;
-        background-size: 200%;
-        padding-bottom: 25%;
+        padding-top: 40%;
     }
+
+    .title.text{
+        display: flex;
+        align-content: flex-end;
+    }
+
+    .text-img{
+        display: none;
+    }
+    
     .order-link{
         
     }
