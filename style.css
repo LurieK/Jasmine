@@ -212,24 +212,24 @@ h5 {
     .woman-img img:first-child {
         position: absolute;
         bottom: 0;
-        left: 3%;
-        width: 25%;
-        z-index: 2;
+        left: 23%;
+        width: 50%;
+        z-index: 3;
     }
     
     .woman-img img:nth-child(2) {
         position: absolute;
-        bottom: 18%;
+        bottom: 15%;
         left: 10%;
-        width: 25%;
+        width: 50%;
         z-index: 1;
     }
     
     .woman-img img:nth-child(3) {
         position: absolute;
         bottom: 0;
-        left: 17%;
-        width: 25%;
+        left: 23%;
+        width: 50%;
         z-index: 3;
 
 }
