@@ -107,7 +107,7 @@ h5 {
 }
 
 .title {
-    background-image: url(./images/background.png);
+    /* background-image: url(./images/background.png); */
     background-repeat: no-repeat;
     background-color: #EB5F0A;
     background-position: top;
@@ -123,6 +123,7 @@ h5 {
   
 }
 
+/* Image with title text */
 /* .title-img{
     display:flex;
     flex-flow: row nowrap;
@@ -134,7 +135,7 @@ h5 {
     
 } */
 
-
+/* Container holding images of three women */
 .woman-img {
     position:absolute;
     background-color: red; /*for debugging*/
@@ -143,7 +144,8 @@ h5 {
     width: 100%;
     height: 50%;
     opacity: 0; 
-    transform: translateX(-100); 
+    transform: translateX(-100px); 
+    transition: opacity 1s, transform 1s;
 
 } 
 
