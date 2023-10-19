@@ -89,19 +89,20 @@ h2 {
 
 h3 {
     align-self: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik Mono One', monospace;
     font-size: 3rem;
 }
 
 h4 {
-    font-family: 'Open Sans';
+    
+    font-family: 'Chivo Mono', monospace;
     margin-right: 10%;
     margin-left: 10%;
     font-size: 20px;
 }
 
 h5 {
-    font-family: 'Open Sans';
+    font-family: 'Chivo Mono', monospace;
     font-size: 1rem;
 }
 
