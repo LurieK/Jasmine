@@ -66,9 +66,42 @@ li {
     text-shadow: 4px 4px black;
 }
 
+.menu {
+    display: none;
+}
+
+.mobile-nav {
+    display:none;
+    color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+   
+}
+
 @media only screen and (max-width: 850px) {
-    ul {
+    .navigation {
         display: none;
+    }
+
+    .menu {
+        display: inline;
+        height: 4rem;
+        width: 4rem;
+        vertical-align: baseline;
+        margin-right: 30px;
+        margin-top: 20px;
+    }
+
+    .mobile-nav {
+        display: none;
+        color: black;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        
     }
 }
 
@@ -254,61 +287,51 @@ h5 {
 
 @media screen and (max-width: 850px) {
     .title {
-        background-image: url(./images/wwhna-logo-grid-profile-orange\ \(1\).png);
-        background-size: contain;
-        background-position: bottom;
+        display:flex;
+        flex-flow: column;
+        justify-content: center;
         background-color: #EB5F0A;
-        padding-top: 40%;
+        padding-bottom: 10%;
+        margin-top:10%;
+    
     }
 
-    .title.text{
-        display: flex;
-        align-content: flex-end;
-    }
+   .woman-img {
+        align-self: center;
+        margin-right: 10%;
+   }
 
-    .text-img{
-        display: none;
-    }
+    
     
     .order-link{
         
     }
 
     .woman-img img:first-child {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50%;
-        z-index: 3;
+        
     }
     
     .woman-img img:nth-child(2) {
-        position: absolute;
-        bottom: 15%;
-        left: 10%;
-        width: 50%;
-        z-index: 1;
+     
     }
     
     .woman-img img:nth-child(3) {
-        position: absolute;
-        bottom: 0;
-        left: 23%;
-        width: 50%;
-        z-index: 3;
+        
 
     }
 
     .title-text{
-        margin-top: 40px;
+        font-size: 3rem;
+        align-self: center;
         
     
     }
-    
-    .text-img {
-        width: 100%;
-        
+
+    .hero-text {
+        font-size: 3rem;
+        margin-top:0;
     }
+    
 }
 
 /* Card examples  */
@@ -354,7 +377,7 @@ h5 {
     background-image: url(./images/Riptide\ Thriller\ Ebook\ Cover.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     background-position: 50% 50%;
     padding-bottom: 20px;
 }
@@ -495,224 +518,11 @@ h5 {
 @media only screen and (max-width: 1148px) and (min-width: 450px) {
 
     .artist-text {
-        width: 50%;
-        margin-left: 10px;
+        
     }
 
     .artist img {
-        width: 50%;
-        margin-left: 10px;
-        margin-right: 0px;
+        
     }
 
 }
-
-/*.mission {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    flex-direction: row-reverse;
-    width: 100%;
-    background-color: whitesmoke;
-    padding: 3rem;
-}
-
-.mission-txt {
-    width: 50%;
-}
-
-.mission img {
-    width: 25%;
-    margin-right: 20px;
-    box-shadow: 0 0 5px gray;
-}
-
-@media only screen and (max-width: 1148px) and (min-width: 450px) {
-
-    .mission-txt {
-        width: 50%;
-        margin-left: 10px;
-    }
-
-    .mission img {
-        width: 50%;
-    }
-
-}
-
-.classes-heading {
-    margin-bottom: 0;
-    font-size: 2.5rem;
-}
-
-.classes {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.english-img {
-    background-image: url(./img/English.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    height: 50px;
-    padding: 150px;
-}
-
-.english {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    box-shadow: 0 0 5px gray;
-}
-
-.reading-img {
-    background-image: url(./img/reading.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50px;
-    padding: 150px;
-}
-
-.reading {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    box-shadow: 0 0 5px gray;
-
-}
-
-.consulting {
-    margin-top: 2rem;
-    margin-right: 20px;
-    box-shadow: 0 0 5px gray;
-}
-
-.consulting-img {
-    background-image: url(./img/consulting.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50px;
-    padding: 150px;
-}
-
-.coding-img {
-    background-image: url(./img/coding.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50px;
-    padding: 150px;
-}
-
-.coding {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 5px gray;
-}
-
-.classes h5 {
-    margin: 1rem 1rem;
-}
-
-.classes h3 {
-    text-align: center;
-}
-
-.meet-Lurie {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    background-color: whitesmoke;
-    padding: 3rem;
-}
-
-.lurie-img {
-    background-image: url(./img/lurie_headshots_2018-0003_Original.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50px;
-    padding: 200px;
-    margin: 20px;
-    box-shadow: 0 0 5px gray;
-}
-
-.about {
-    width: 40%;
-}
-
-@media only screen and (max-width: 1148px) and (min-width: 450px) {
-    .meet-Lurie {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about {
-        width: 75%;
-    }
-}
-
-.contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 0px;
-    width: 100%;
-    padding: 3rem;
-    background-color: #325E99;
-    background-size: cover;
-    color: white
-}
-
-.contact a {
-    width: 10%;
-    color: #325E99;
-    text-align: center;
-    background: white;
-    font-size: 22px;
-    line-height: 22px;
-    padding: 15px;
-    border-radius: 7px;
-    border: white;
-    font-family: 'montserrat';
-    text-decoration: none;
-    box-shadow: 0 0 5px black;
-}
-
-.contact h3 {
-    font-size: 1.5rem;
-}
-
-@media only screen and (max-width: 1148px) and (min-width: 450px) {
-    .classes {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-        align-content: center;
-    }
-
-    .coding {
-        margin-right: 20px;
-    }
-
-    .contact a {
-        width: 30%;
-    }
-
-    .contact h3 {
-        text-align: center;
-    }
-} */

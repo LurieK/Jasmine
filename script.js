@@ -51,5 +51,15 @@ window.addEventListener('scroll', checkPosition);
 checkPosition(); //run check
 
 
+const navIcon = document.querySelector('.menu');
+const mobileNav = document.querySelector('.mobile-nav');
+
+navIcon.addEventListener('click', function() {
+    if (mobileNav.style.display === 'block') {
+        mobileNav.style.display = 'none';
+    } else {
+        mobileNav.style.display = 'block';
+    }
+});
 
 
