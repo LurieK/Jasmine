@@ -24,7 +24,7 @@ body {
 
 .header {
     display: flex;
-    background-color: #434B99;
+    background-color: #ffd52d;
     width: 100%;
     height: 100px;
     flex-direction: row;
@@ -58,7 +58,8 @@ li {
 }
 
 .navigation li a {
-    color: white;
+    color: #eb5f0a;
+    text-shadow: 5px 2px #f6f4f4;
     text-decoration: none;
 }
 
@@ -140,21 +141,29 @@ h5 {
     font-size: 1rem;
 }
 
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
 .title {
     background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     background-color: #EB5F0A;
     background-position: top;
     background-size: cover;
-    /* position:relative; */
-    width: 100%;
+    /* position: relative; */
+    width: 86%;
     height: 500px;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     color: white;
     box-shadow: 0 0 5px gray;
-
-    display:flex;
+    display: flex;
     flex-flow: row;
+   
+
   
 }
 
@@ -253,6 +262,7 @@ h5 {
     display:flex;
     flex-flow: column;
     width: 75%;
+    justify-content: space-around;
     /* padding-top: 10%; */
     /* margin-left: 30%; */
 
@@ -263,6 +273,8 @@ h5 {
     color:#FFD52D;
     text-shadow: 10px 8px black;
     font-size: 6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
     
 }
 

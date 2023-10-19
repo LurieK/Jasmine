@@ -31,24 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //tilt hero images 'dance'
 
-const tiltImages = document.querySelectorAll('.greta, .rosa, .lux');
-const windowHeight = window.innerHeight;
+// const tiltImages = document.querySelectorAll('.greta, .rosa, .lux');
+// const windowHeight = window.innerHeight;
 
-function checkPosition() {
-    for (let img of tiltImages) {
-        const topOfElement = img.getBoundingClientRect().top;
+// function checkPosition() {
+//     for (let img of tiltImages) {
+//         const topOfElement = img.getBoundingClientRect().top;
 
-        // Check if the image is in view otherwise the animation stops
-        if (topOfElement < windowHeight && topOfElement + img.clientHeight > 0) {
-            img.classList.add('startTilt');
-        } else {
-            img.classList.remove('startTilt');
-        }
-    }
-}
+//         // Check if the image is in view otherwise the animation stops
+//         if (topOfElement < windowHeight && topOfElement + img.clientHeight > 0) {
+//             img.classList.add('startTilt');
+//         } else {
+//             img.classList.remove('startTilt');
+//         }
+//     }
+// }
 
-window.addEventListener('scroll', checkPosition);
-checkPosition(); //run check
+// window.addEventListener('scroll', checkPosition);
+// checkPosition(); //run check
 
 
 const navIcon = document.querySelector('.menu');
