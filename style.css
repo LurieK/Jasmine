@@ -437,7 +437,8 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 75%;
+    margin-top: 20px;
     padding: 3rem;
     background-color: #b90d0d;
     box-shadow: 10px 8px black;
@@ -454,7 +455,7 @@ h5 {
 }
 
 .artist img {
-    width: 25%;
+    width: 40%;
     margin-left: 20px;
     box-shadow: 10px 8px black;}
 
