@@ -513,6 +513,10 @@ h5 {
         flex-flow: column;
         align-items: center;
     }
+
+    .cards h3 {
+        font-size: 40px;
+    }
 }
 
 
@@ -593,4 +597,41 @@ h5 {
     box-shadow: 10px 8px black;
     width: 75%;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.donate-text {
+    text-align: center;
+}
+
+.donate-btn {
+    background-color: #df9ac1;
+    width: 20%;
+    margin-bottom: 20px;
+    align-self: center;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 0;
+    padding: 20px;
+    font-family: "Philly Sans";
+    box-shadow: 10px 8px black;
+    
+}
+
+
+
+@media only screen and (max-width: 850px){
+
+    .donate-text h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .donate-btn{
+        padding: 10px;
+        box-shadow: 8px 6px black;
+    
+    }
 }
