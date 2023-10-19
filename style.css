@@ -314,8 +314,12 @@ h5 {
 /* Card examples  */
 
 .about{
-    background-color: #2395d32e;
-    padding-bottom: 20px;
+    display:flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 100%;
+
+
 
 }
 
@@ -331,8 +335,34 @@ h5 {
 .about-heading{
     font-family: "Philly Sans";
     font-size: 4rem;
-    padding-top: 20px;
     padding-bottom: 20px;
+    
+}
+
+.about-text{
+    background-color: #d7e4f9;
+    align-self: center;
+    padding: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 40px;
+    box-shadow: 10px 8px black;
+    width: 80%
+}
+
+.cards {
+    background-image: url(./images/Riptide\ Thriller\ Ebook\ Cover.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: 50% 50%;
+    padding-bottom: 20px;
+}
+
+.cards h3 {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 10px 8px black;
 }
 
 .Activism,
@@ -342,6 +372,9 @@ h5 {
     display: flex;
     justify-content: center;
     flex-flow: column;
+    
+    margin-top: 30px;
+   
 }
 
 
@@ -437,8 +470,8 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
-    margin-top: 20px;
+    width: 60%;
+    margin-top: 60px;
     padding: 3rem;
     background-color: #b90d0d;
     box-shadow: 10px 8px black;
