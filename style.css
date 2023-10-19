@@ -368,6 +368,9 @@ h5 {
     background-size: cover;
     background-position: 50% 50%;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
 }
 
 .cards h3 {
@@ -383,12 +386,48 @@ h5 {
     display: flex;
     justify-content: center;
     flex-flow: column;
-    
     margin-top: 30px;
+    width: 75%;
+    align-self: center;
+    padding: 10px;
+    position: relative;
+    border: 10px solid white; 
+    border-radius: 0; 
+    padding: 10px;
+
    
 }
 
+.Activism::before,
+.Science::before,
+.Goddesses::before,
+.Art::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 15px solid white;
+    border-radius: 30px;
+}
 
+
+.Activism {
+    background-color: #df9ac1;
+}
+
+.Science{
+    background-color: #ffd52d;
+}
+
+.Goddesses{
+    background-color: #b90d0d;
+}
+
+.Art {
+    background-color: #2395d3;
+}
 
 .card-examples {
     z-index: 2;
