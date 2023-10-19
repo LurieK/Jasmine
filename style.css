@@ -22,6 +22,12 @@ body {
     padding: 0;
 }
 
+.about-heading, h4,h3, .card-examples, .Jasmine, .artist-text, .donate-text {
+    opacity: 0;
+    transition: opacity 1s, transform 1s; 
+    transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
+}
+
 .header {
     display: flex;
     background-color: #ffd52d;
@@ -335,12 +341,6 @@ h5 {
     flex-flow: column;
     width: 100%;
 
-}
-
-.about-heading, h4,h3, .card-examples, .Jasmine {
-    opacity: 0;
-    transition: opacity 1s, transform 1s; 
-    transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
 }
 
 .about-heading{

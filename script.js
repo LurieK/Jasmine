@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
 
-    const elementsToAnimate = document.querySelectorAll('.Jasmine, .woman-img, .about-heading, h4, h3, .card-examples');
+    const elementsToAnimate = document.querySelectorAll('.Jasmine, .woman-img, .about-heading, h4, h3, .card-examples, .donate-text, .artist-text');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
