@@ -301,25 +301,6 @@ h5 {
         margin-right: 10%;
    }
 
-    
-    
-    .order-link{
-        
-    }
-
-    .woman-img img:first-child {
-        
-    }
-    
-    .woman-img img:nth-child(2) {
-     
-    }
-    
-    .woman-img img:nth-child(3) {
-        
-
-    }
-
     .title-text{
         font-size: 3rem;
         align-self: center;
@@ -342,12 +323,7 @@ h5 {
     flex-flow: column;
     width: 100%;
 
-
-
 }
-
-
-
 
 .about-heading, h4,h3, .card-examples, .Jasmine {
     opacity: 0;
@@ -510,19 +486,40 @@ h5 {
     color: white;
 }
 
-.artist img {
+.Jasmine-mobile {
+    display: none;
+}
+
+.Jasmine {
     width: 40%;
     margin-left: 20px;
-    box-shadow: 10px 8px black;}
+    box-shadow: 10px 8px black;
+}
 
-@media only screen and (max-width: 1148px) and (min-width: 450px) {
-
+@media only screen and (max-width: 850px) {
+  
     .artist-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    .Jasmine-mobile {
+        display: flex;
+        align-self: center;
+        width: 50%;
+        box-shadow: 10px 8px black;
+    }
+
+    .Jasmine {
+        display: none;
         
     }
 
-    .artist img {
-        
+    .artist-text h4 {
+        width: 100%;
+        align-self: center;
     }
 
 }
