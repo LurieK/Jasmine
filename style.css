@@ -74,7 +74,7 @@ li {
 
 
 h1 {
-    
+    font-family: "Philly Sans"; 
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
@@ -313,7 +313,7 @@ h5 {
 
 
 
-.about-heading, h4,h3, .card-examples {
+.about-heading, h4,h3, .card-examples, .Jasmine {
     opacity: 0;
     transition: opacity 1s, transform 1s; 
     transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
@@ -423,34 +423,41 @@ h5 {
     }
 }
 
-/*
-.philosophy {
+
+.artist {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
     width: 100%;
     padding: 3rem;
+    background-color: #b90d0d;
+    box-shadow: 10px 8px black;
+}
+.artist-text h1 {
+    color:#FFD52D;
+    text-shadow: 10px 8px black;
+    font-size: 60px;
 }
 
-.phil-text {
+.artist-text {
     width: 50%;
+    color: white;
 }
 
-.philosophy img {
+.artist img {
     width: 25%;
     margin-left: 20px;
-    box-shadow: 0 0 5px gray;
-}
+    box-shadow: 10px 8px black;}
 
 @media only screen and (max-width: 1148px) and (min-width: 450px) {
 
-    .phil-text {
+    .artist-text {
         width: 50%;
         margin-left: 10px;
     }
 
-    .philosophy img {
+    .artist img {
         width: 50%;
         margin-left: 10px;
         margin-right: 0px;
@@ -458,7 +465,7 @@ h5 {
 
 }
 
-.mission {
+/*.mission {
     display: flex;
     justify-content: center;
     align-items: center;
