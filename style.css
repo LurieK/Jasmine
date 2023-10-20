@@ -187,7 +187,7 @@ h5 {
     padding-left:0; 
     left: 0;
     bottom: 0;
-    width: 50%;
+    width: 40%;
     height: 100%;
     opacity: 0; 
     transform: translateX(-100px); 
@@ -200,71 +200,38 @@ h5 {
     padding: 0;
 } 
 
-@keyframes tiltGreta {
-    0%, 100% {
-        transform: rotateZ(0deg);
-    }
-    50% {
-        transform: rotateZ(5deg); 
-    }
-}
 
-.woman-img img:first-child {
+
+.greta {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 85%;
+    width: 60%;
     z-index: 2;
 }
 
-@keyframes tiltRosa {
-    0%, 100% {
-        transform: rotateZ(0deg);
-    }
-    50% {
-        transform: rotateZ(-5deg); 
-    }
-   
-}
 
 
-.woman-img img:nth-child(2) {
+
+.rosa {
     position: absolute;
     bottom: 20%;
     left: 17%;
-    width: 85%;
+    width: 60%;
     z-index: 1;
 }
 
-@keyframes tiltLux {
-    0%, 100% {
-        transform: rotateZ(0deg);
-    }
-    50% {
-        transform: rotateZ(-5deg); 
-    }
-}
 
 
-.woman-img img:nth-child(3) {
+.lux {
     position: absolute;
     bottom: 0;
-    left: 40%;
-    width: 83%;
+    left: 50%;
+    width: 60%;
     z-index: 3;
 }
 
-.greta.startTilt {
-    animation: tiltGreta 1s infinite;
-}
 
-.rosa.startTilt {
-    animation: tiltRosa 1s infinite;
-}
-
-.lux.startTilt {
-    animation: tiltLux 1s infinite;
-}
 
 
 .title-text{
