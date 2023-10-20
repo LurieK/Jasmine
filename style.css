@@ -280,10 +280,9 @@ h5 {
 .hero-text {
     color: #FFD52D;
     text-shadow: 10px 8px black;
-    font-size: 8vw;
+    font-size: 6rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    overflow: hidden;
     margin-right: 20px;
     
 }
