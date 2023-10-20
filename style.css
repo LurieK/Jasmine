@@ -133,20 +133,22 @@ h2 {
 
 h3 {
     align-self: center;
-    font-family: 'Rubik Mono One', monospace;
+    font-family: 'Hind', sans-serif;
     font-size: 3rem;
+    text-transform:uppercase;
+    font-weight: 700;
 }
 
 h4 {
     
-    font-family: 'Chivo Mono', monospace;
+    font-family: 'Courier Prime', monospace;
     margin-right: 10%;
     margin-left: 10%;
     font-size: 20px;
 }
 
 h5 {
-    font-family: 'Chivo Mono', monospace;
+    font-family: 'Courier Prime', monospace;
     font-size: 1rem;
 }
 
@@ -232,6 +234,29 @@ h5 {
 }
 
 
+.speech-bubble {
+    position: absolute;
+    top: -20%; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* hidden by default */
+    transition: opacity 0.5s;
+}
+
+.bubble-text {
+    position: absolute;
+    top: -15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* hidden by default */
+    font-size: 16px;
+    
+}
+/* on hover*/
+.woman:hover .speech-bubble,
+.woman:hover .bubble-text {
+    opacity: 1; 
+}
 
 
 .title-text{

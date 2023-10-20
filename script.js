@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+
+
 //tilt hero images 'dance'
 
 // const tiltImages = document.querySelectorAll('.greta, .rosa, .lux');
