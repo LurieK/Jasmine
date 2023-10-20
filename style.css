@@ -22,9 +22,15 @@ body {
     padding: 0;
 }
 
+.about-heading, h4,h3, .card-examples, .Jasmine, .artist-text, .donate-text {
+    opacity: 0;
+    transition: opacity 1s, transform 1s; 
+    transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
+}
+
 .header {
     display: flex;
-    background-color: #434B99;
+    background-color: #ffd52d;
     width: 100%;
     height: 100px;
     flex-direction: row;
@@ -38,10 +44,11 @@ body {
 }
 
 .header h3 {
+    color:#EB5F0A;
     margin-left: 30px;
     font-size: 2rem;
     font-family: "Philly Sans";
-    text-shadow: 4px 4px black;
+    text-shadow: 4px 4px white;
 }
 
 .header ul {
@@ -52,13 +59,14 @@ li {
     display: inline;
     vertical-align: baseline;
     font-family: 'Philly Sans';
-    font-size: 20px;
+    font-size: 30px;
     margin-right: 30px;
 
 }
 
 .navigation li a {
-    color: white;
+    color: #eb5f0a;
+    text-shadow: 5px 2px #f6f4f4;
     text-decoration: none;
 }
 
@@ -80,7 +88,7 @@ li {
    
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 930px) {
     .navigation {
         display: none;
     }
@@ -103,6 +111,8 @@ li {
         width: 100%;
         
     }
+
+   
 }
 
 
@@ -140,21 +150,29 @@ h5 {
     font-size: 1rem;
 }
 
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
 .title {
     background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     background-color: #EB5F0A;
     background-position: top;
     background-size: cover;
-    /* position:relative; */
-    width: 100%;
+    /* position: relative; */
+    width: 86%;
     height: 500px;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     color: white;
     box-shadow: 0 0 5px gray;
-
-    display:flex;
+    display: flex;
     flex-flow: row;
+   
+
   
 }
 
@@ -253,16 +271,19 @@ h5 {
     display:flex;
     flex-flow: column;
     width: 75%;
+    justify-content: space-around;
     /* padding-top: 10%; */
     /* margin-left: 30%; */
 
 }
 
 .hero-text {
-    width: 100%;
-    color:#FFD52D;
+    color: #FFD52D;
     text-shadow: 10px 8px black;
     font-size: 6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
     
 }
 
@@ -283,6 +304,12 @@ h5 {
     color: black;
     text-decoration: none;
    
+}
+
+@media screen and (max-width: 960px) {
+    .hero-text{
+
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -325,12 +352,6 @@ h5 {
 
 }
 
-.about-heading, h4,h3, .card-examples, .Jasmine {
-    opacity: 0;
-    transition: opacity 1s, transform 1s; 
-    transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
-}
-
 .about-heading{
     font-family: "Philly Sans";
     font-size: 4rem;
@@ -356,6 +377,9 @@ h5 {
     background-size: cover;
     background-position: 50% 50%;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
 }
 
 .cards h3 {
@@ -371,12 +395,48 @@ h5 {
     display: flex;
     justify-content: center;
     flex-flow: column;
-    
     margin-top: 30px;
+    width: 75%;
+    align-self: center;
+    padding: 10px;
+    position: relative;
+    border: 10px solid white; 
+    border-radius: 0; 
+    padding: 10px;
+
    
 }
 
+.Activism::before,
+.Science::before,
+.Goddesses::before,
+.Art::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 15px solid white;
+    border-radius: 30px;
+}
 
+
+.Activism {
+    background-color: #df9ac1;
+}
+
+.Science{
+    background-color: #ffd52d;
+}
+
+.Goddesses{
+    background-color: #b90d0d;
+}
+
+.Art {
+    background-color: #2395d3;
+}
 
 .card-examples {
     z-index: 2;
@@ -462,6 +522,10 @@ h5 {
         flex-flow: column;
         align-items: center;
     }
+
+    .cards h3 {
+        font-size: 40px;
+    }
 }
 
 
@@ -522,4 +586,61 @@ h5 {
         align-self: center;
     }
 
+}
+
+
+.donate {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(./images/Riptide\ Thriller\ Ebook\ Cover.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.donate-text {
+    background-color: white;
+    box-shadow: 10px 8px black;
+    width: 75%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.donate-text {
+    text-align: center;
+}
+
+.donate-btn {
+    background-color: #df9ac1;
+    width: 20%;
+    margin-bottom: 20px;
+    align-self: center;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 0;
+    padding: 20px;
+    font-family: "Philly Sans";
+    box-shadow: 10px 8px black;
+    
+}
+
+
+
+@media only screen and (max-width: 850px){
+
+    .donate-text h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .donate-btn{
+        padding: 10px;
+        box-shadow: 8px 6px black;
+    
+    }
 }
