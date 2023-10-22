@@ -27,50 +27,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-});
+ });
 
-//speech bubbles
+// //speech bubbles
 
-const women = document.querySelectorAll(".woman");
+// const women = document.querySelectorAll(".woman");
 
-//listen for hover
-women.forEach(woman => {
-    woman.addEventListener("mouseenter", function() {
-        const textElement = this.querySelector(".bubble-text");
-        const text = getTextForWoman(this.classList[1]); 
-        animateText(textElement, text);
-    });
-});
+// //listen for hover
+// women.forEach(woman => {
+//     woman.addEventListener("mouseenter", function() {
+//         const textElement = this.querySelector(".bubble-text");
+//         const text = getTextForWoman(this.classList[1]); 
+//         animateText(textElement, text);
+//     });
+// });
 
-//add text to speech bubble
-function getTextForWoman(name) {
-    const texts = {
-        greta: "This is Greta's quote.",
-        rosa: "This is Rosa's quote.",
-        lux: "This is Lux's quote."
-    };
+// //add text to speech bubble
+// function getTextForWoman(name) {
+//     const texts = {
+//         greta: "This is Greta's quote.",
+//         rosa: "This is Rosa's quote.",
+//         lux: "This is Lux's quote."
+//     };
 
-    return texts[name] || "";
-}
+//     return texts[name] || "";
+// }
 
-//typing animation
-function animateText(element, text) {
-    element.textContent = "";
-    let index = 0;
-    console.log(text)//testing
-    console.log(element)//testing
-    function type() {
-        //if index is less then the length of the text for the quote, only one letter 
-        //at a time will render on the screen.
-        if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 100); 
-        }
-    }
+// //typing animation
+// function animateText(element, text) {
+//     element.textContent = "";
+//     let index = 0;
+//     console.log(text)//testing
+//     console.log(element)//testing
+//     function type() {
+//         //if index is less then the length of the text for the quote, only one letter 
+//         //at a time will render on the screen.
+//         if (index < text.length) {
+//             element.textContent += text.charAt(index);
+//             index++;
+//             setTimeout(type, 100); 
+//         }
+//     }
 
-    type();
-}
+//     type();
+// }
 
 
 //tilt hero images 'dance'
