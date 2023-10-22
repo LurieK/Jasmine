@@ -266,25 +266,38 @@ h5 {
 }
 
 .speech-bubble {
-    position: absolute;
-    top: 20%; 
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 1; /* hidden by default */
-    transition: opacity 0.5s;
-    color: black;
+    display: grid;
+    width: 60%;  /* Set this based on your needs */
+    height: 60%;  /* Set this based on your needs */
+    place-items: center;  /* Shortcut for align-items and justify-items */
+    grid-area: 1/1;
 }
 
-.bubble-text {
-    /* position: absolute; */
-    top: -15%; 
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 1; /* hidden by default */
-    font-size: 16px;
-    color: black;
-    
+.greta-bubble{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* This creates 2 columns */
+    grid-template-rows: auto auto;  
 }
+
+.greta-bubble .speech-bubble img {
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 1;  /* Places the image in the first cell */
+}
+
+.greta-bubble .bubble-text {
+    grid-area: 1 / 1;  /* Places the text in the first cell, on top of the image */
+/* position: absolute; */
+top: -15%; 
+left: 50%;
+transform: translateX(-50%);
+opacity: 1; /* hidden by default */
+font-size: 16px;
+color: black;    z-index: 1;  /* Optional: Ensure the text is above the image */
+}
+
+
+
 
 .greta-text {
     
