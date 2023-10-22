@@ -169,7 +169,7 @@ h5 {
     width: 86%;
     height: 500px;
     /* padding-top: 10%; */
-    color: white;
+    /* color: white; */
     box-shadow: 0 0 5px gray;
     display: flex;
     flex-flow: row;
@@ -197,14 +197,18 @@ h5 {
 
 } 
 
-.woman-img img {
+.woman-img .woman{
  
     padding: 0;
 } 
 
+.greta, 
+.rosa,
+.lux {
+    color: black;
+}
 
-
-.greta {
+.greta img {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -215,7 +219,7 @@ h5 {
 
 
 
-.rosa {
+.rosa img {
     position: absolute;
     bottom: 20%;
     left: 17%;
@@ -225,7 +229,7 @@ h5 {
 
 
 
-.lux {
+.lux img {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -236,11 +240,12 @@ h5 {
 
 .speech-bubble {
     position: absolute;
-    top: -20%; 
+    top: 20%; 
     left: 50%;
     transform: translateX(-50%);
     opacity: 0; /* hidden by default */
     transition: opacity 0.5s;
+    color: black;
 }
 
 .bubble-text {
@@ -248,8 +253,9 @@ h5 {
     top: -15%; 
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0; /* hidden by default */
+    /* opacity: 0; hidden by default */
     font-size: 16px;
+    color: black;
     
 }
 /* on hover*/
