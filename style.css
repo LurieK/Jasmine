@@ -160,7 +160,7 @@ h5 {
 }
 
 .title {
-    background-image: url(./images/background.jpg);
+    background-image: url(./images/background\ \(1\).png);
     background-repeat: no-repeat;
     background-color: #EB5F0A;
     background-position: top;
@@ -237,6 +237,33 @@ h5 {
     z-index: 3;
 }
 
+@media screen and (min-width: 1465px){
+    .greta img{
+        width: 55%
+    }
+
+    .rosa img{
+        width: 55%
+    }
+
+    .lux img{
+        width: 55%
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .greta img{
+        width: 45%
+    }
+
+    .rosa img{
+        width: 45%
+    }
+
+    .lux img{
+        width: 45%
+    }
+}
 
 .speech-bubble {
     position: absolute;
@@ -249,13 +276,17 @@ h5 {
 }
 
 .bubble-text {
-    position: absolute;
+    /* position: absolute; */
     top: -15%; 
     left: 50%;
     transform: translateX(-50%);
-    /* opacity: 0; hidden by default */
+    opacity: 0; hidden by default
     font-size: 16px;
     color: black;
+    
+}
+
+.greta-text {
     
 }
 /* on hover*/
@@ -403,6 +434,15 @@ h5 {
     padding: 10px;
 
    
+}
+
+@media screen and (min-width: 1550px){
+    .Activism,
+    .Science,
+    .Goddesses,
+    .Art {
+        width: 60%;
+    }
 }
 
 .Activism::before,
