@@ -282,6 +282,7 @@ h5 {
 }
 
 .rosa-bubble{
+    background-image: url(./images/speech-bubble.png);
     margin-left: 35%;
     margin-top: -40%;
     position: relative;
