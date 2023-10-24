@@ -282,7 +282,6 @@ h5 {
 }
 
 .rosa-bubble{
-    background-image: url(./images/speech-bubble.png);
     margin-left: 35%;
     margin-top: -40%;
     position: relative;
@@ -367,7 +366,7 @@ h5 {
     }
     
     .lux-bubble{
-        margin-left: 30%;
+        margin-left: 0%;
         margin-top: 60%;
         position: relative;
         width: 90%;
@@ -424,6 +423,14 @@ h5 {
     
 }
 
+@media screen and (max-width: 850px){
+    
+    .lux-bubble{
+        margin-left: 20%;
+
+  
+    
+}
 
 .title-text{
     display:flex;
