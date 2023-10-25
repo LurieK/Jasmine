@@ -223,7 +223,7 @@ h5 {
     color: black;
 }
 
-.greta img {
+.greta-img {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -234,7 +234,7 @@ h5 {
 
 
 
-.rosa img {
+.rosa-img {
     position: absolute;
     bottom: 20%;
     left: 17%;
@@ -244,7 +244,7 @@ h5 {
 
 
 
-.lux img {
+.lux-img {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -253,29 +253,29 @@ h5 {
 }
 
 @media screen and (min-width: 1465px){
-    .greta img{
+    .greta-img{
         width: 55%
     }
 
-    .rosa img{
+    .rosa-img{
         width: 55%
     }
 
-    .lux img{
+    .lux-img{
         width: 55%
     }
 }
 
 @media screen and (min-width: 1600px){
-    .greta img{
+    .greta-img{
         width: 45%
     }
 
-    .rosa img{
+    .rosa-img{
         width: 45%
     }
 
-    .lux img{
+    .lux-img{
         width: 45%
     }
 }
@@ -324,9 +324,15 @@ h5 {
    
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 350px) {
     .hero-text{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 
+    .woman-img{
+        margin-right: 0;
+        align-self: center
     }
 }
 
@@ -341,10 +347,7 @@ h5 {
     
     }
 
-   .woman-img {
-        align-self: center;
-        margin-right: 10%;
-   }
+   
 
     .title-text{
         font-size: 3rem;
