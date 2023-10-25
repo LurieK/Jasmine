@@ -311,6 +311,10 @@ h5 {
    
     /* ... */
   }
+
+  .spare-bubble{
+    display: none;
+  }
   
   .rosa-bubble {
     margin-left: 12.5vw;
@@ -324,7 +328,7 @@ h5 {
     /* ... */
   }
 
-      
+
 
 
 
@@ -358,6 +362,27 @@ h5 {
 }
 
 /*small computer*/
+
+@media screen and (min-width: 912px){
+
+    .greta-bubble .speech-bubble {
+        display: none
+    }
+
+    .greta-bubble{
+        margin-left: 
+    }
+
+    .spare-bubble{
+        display: block;
+        width: 30vw;
+        position:absolute;
+        z-index: 5;
+    }
+
+
+
+}
 
 
 .title-text{
