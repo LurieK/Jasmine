@@ -428,7 +428,7 @@ h5 {
     .lux-bubble{
         margin-left: 20%;
 
-  
+    }
     
 }
 
@@ -437,8 +437,8 @@ h5 {
     flex-flow: column;
     width: 75%;
     justify-content: space-around;
-    /* padding-top: 10%; */
-    /* margin-left: 30%; */
+    padding-top: 10%;
+    margin-left: 30%;
 
 }
 
@@ -447,8 +447,8 @@ h5 {
     text-shadow: 10px 8px black;
     font-size: 6rem;
     margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 20px;
+    /* margin-bottom: 10px;
+    margin-right: 20px; */
     
 }
 
