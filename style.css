@@ -265,180 +265,18 @@ h5 {
     }
 }
 
-.speech-bubble {
-    border: 5px solid #1C6EA4;
-    position: absolute;
-    width: 100%;
-}
 
-/*bubble containers*/
-.greta-bubble{
-    margin-left: -30%;
-    margin-top: 100%;
-    position: relative;
-    width: 60%;
-    height: 50%;
-    border: 5px solid #1C6EA4;
-}
-
-.rosa-bubble{
-    margin-left: 35%;
-    margin-top: -40%;
-    position: relative;
-    width: 60%;
-    height: 50%;
-    border: 5px solid #1C6EA4;
-}
-
-.lux-bubble{
-    margin-left: 50%;
-    margin-top: 60%;
-    position: relative;
-    width: 60%;
-    height: 50%;
-    border: 5px solid #1C6EA4;
-}
-.greta-bubble .speech-bubble {
-    position: absolute;
-    width: 100%;
-}
-
-.rosa-bubble .speech-bubble {
-    position: absolute;
-    width: 100%;
-}
-
-.lux-bubble .speech-bubble {
-    position: absolute;
-    width: 100%;
-}
-
-.bubble-text {
-    position: absolute;
-    z-index: 4;
-    font-family: 'curior prime';
-}
-
-/* targeting text location */
-
-.greta-bubble .bubble-text {
-    margin-top: -90%;
-    margin-left: 15%;
-    border: 5px solid #1C6EA4;
-}
-
-.rosa-bubble .bubble-text {
-    margin-top: -90%;
-    margin-left: 25%;
-    border: 5px solid #1C6EA4;
-}
-
-.lux-bubble .bubble-text {
-    margin-top: -90%;
-    margin-left: 60%;
-    width: 80%;
-    border: 5px solid #1C6EA4;
-}
-/* on hover*/
-.woman:hover .speech-bubble,
-.woman:hover .bubble-text {
-    opacity: 1; 
-}
+ 
 
 
-@media screen and (max-width: 850px){
-    .greta-bubble{
-        margin-left: -60%;
-        margin-top: 150%;
-        position: relative;
-        width: 90%;
-        height: 50%;
-        border: 5px solid #1C6EA4;
-    }
-    
-    .rosa-bubble{
-        margin-left: 20%;
-        margin-top: -70%;
-        position: relative;
-        width: 90%;
-        height: 50%;
-        border: 5px solid #1C6EA4;
-    }
-    
-    .lux-bubble{
-        margin-left: 0%;
-        margin-top: 60%;
-        position: relative;
-        width: 90%;
-        height: 50%;
-        border: 5px solid #1C6EA4;
-    }
-    .greta-bubble .speech-bubble {
-        position: absolute;
-        width: 100%;
-    }
-    
-    .rosa-bubble .speech-bubble {
-        position: absolute;
-        width: 100%;
-    }
-    
-    .lux-bubble .speech-bubble {
-        position: absolute;
-        width: 100%;
-    }
-    
-    .bubble-text {
-        position: absolute;
-        z-index: 4;
-    }
-    
-    /* targeting text location */
-    .greta-bubble .bubble-text {
-        margin-top: -90%;
-        margin-left: 20%;
-        border: 5px solid #1C6EA4;
-    }
-    
-    .rosa-bubble .bubble-text {
-        margin-top: -90%;
-        margin-left: 25%;
-        border: 5px solid #1C6EA4;
-    }
-    
-    .lux-bubble .bubble-text {
-        margin-top: -90%;
-        margin-left: 60%;
-        width: 80%;
-        border: 5px solid #1C6EA4;
-    }
-    /* on hover*/
-    .woman:hover .speech-bubble,
-    .woman:hover .bubble-text {
-        opacity: 1; 
-    }
-    span .bubble-text h5 {
-        font-size: .75rem;
-    }
-    
-}
-
-@media screen and (max-width: 850px){
-    
-    .lux-bubble{
-        margin-left: 20%;
-
-    }
-    
-}
 
 .title-text{
     display:flex;
     flex-flow: column;
     width: 75%;
     justify-content: space-around;
-    padding-top: 10%;
-    margin-left: 30%;
+    /* padding-top: 10%;
+    margin-left: 30%; */
 
 }
 
@@ -447,8 +285,8 @@ h5 {
     text-shadow: 10px 8px black;
     font-size: 6rem;
     margin-top: 10px;
-    /* margin-bottom: 10px;
-    margin-right: 20px; */
+    margin-bottom: 10px;
+    margin-right: 20px;
     
 }
 
