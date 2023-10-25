@@ -285,6 +285,8 @@ h5 {
         width: 45%
     }
 }
+
+
 .speech-bubble {
     width: 40vw;
     position:absolute;
@@ -293,7 +295,7 @@ h5 {
 
 .bubble-text {
     position: absolute;
-    width: 100%;
+    width: 40vw;
     z-index: 6;
     
 }
@@ -321,7 +323,10 @@ h5 {
     margin-top: 30vh;
     /* ... */
   }
-@media screen and (min-width: 414px){
+
+      
+
+@media screen and (min-width: 360px){
     .rosa-bubble {
         margin-left: 12.5vw;
         margin-top: -10vh;
@@ -330,6 +335,36 @@ h5 {
     .lux-bubble{
         margin-left: 25vw;
         margin-top: 20vh;
+    }
+      
+
+}
+
+
+@media screen and (min-width: 820px){
+
+    .speech-bubble {
+        width: 30vw;
+        position: absolute;
+        z-index: 5;
+    }
+    
+    .bubble-text {
+        position: absolute;
+        width: 30vw;
+        z-index: 6;
+        
+    }
+   
+    .greta-bubble {
+        margin-left: -22vw;
+        margin-top: 5vh;
+    }
+
+
+    .rosa-bubble {
+        margin-left: 15vw;
+        margin-top: -15vh;
     }
       
 
