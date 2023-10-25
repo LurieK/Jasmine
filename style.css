@@ -286,10 +286,23 @@ h5 {
     }
 }
 
+@media screen and (min-width: 350px){
+    .speech-bubble {
+        width: 40vw;
+        position:absolute;
+    }
 
- 
+    .bubble-text {
+        position: absolute;
+        
+    }
 
+    .bubble-text h5 {
+        font-size: 2vh;
+        margin-left: 5vw;
+    }
 
+}
 
 .title-text{
     display:flex;
