@@ -285,22 +285,53 @@ h5 {
         width: 45%
     }
 }
+.speech-bubble {
+    width: 40vw;
+    position:absolute;
+    z-index: 5;
+}
 
-@media screen and (min-width: 350px){
-    .speech-bubble {
-        width: 40vw;
-        position:absolute;
+.bubble-text {
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    
+}
+
+.bubble-text h5 {
+    font-size: 2vh;
+    margin-left: 5vw;
+}
+
+.greta-bubble {
+    margin-left: -30vw;
+    margin-top: 10vh;
+   
+    /* ... */
+  }
+  
+  .rosa-bubble {
+    margin-left: 17.5vw;
+    margin-top: -20vh;
+    /* ... */
+  }
+  
+  .lux-bubble {
+    margin-left: 25vw;
+    margin-top: 30vh;
+    /* ... */
+  }
+@media screen and (min-width: 414px){
+    .rosa-bubble {
+        margin-left: 12.5vw;
+        margin-top: -10vh;
     }
 
-    .bubble-text {
-        position: absolute;
-        
+    .lux-bubble{
+        margin-left: 25vw;
+        margin-top: 20vh;
     }
-
-    .bubble-text h5 {
-        font-size: 2vh;
-        margin-left: 5vw;
-    }
+      
 
 }
 
