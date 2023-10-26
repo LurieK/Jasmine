@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Philly Sans"; 
-    src: url("./philly_sans.woff") ;
+    font-family: "Philly Sans";
+    src: url("./philly_sans.woff");
 
 }
 
@@ -9,7 +9,7 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
-    
+
 }
 
 body {
@@ -22,10 +22,17 @@ body {
     padding: 0;
 }
 
-.about-heading, h4,h3, .card-examples, .Jasmine, .artist-text, .donate-text {
+.about-heading,
+h4,
+h3,
+.card-examples,
+.Jasmine,
+.artist-text,
+.donate-text {
     opacity: 0;
-    transition: opacity 1s, transform 1s; 
-    transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
+    transition: opacity 1s, transform 1s;
+    transform: translateY(30px);
+    /* slide down by 30px initially; adjust as needed */
 }
 
 .header {
@@ -44,7 +51,7 @@ body {
 }
 
 .header h3 {
-    color:#EB5F0A;
+    color: #EB5F0A;
     margin-left: 30px;
     font-size: 2rem;
     font-family: "Philly Sans";
@@ -79,17 +86,17 @@ li {
 }
 
 .mobile-nav {
-    display:none;
+    display: none;
     color: black;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-   
+
 }
 
-@media screen and (min-width: 350px){
-    .header h3{
+@media screen and (min-width: 350px) {
+    .header h3 {
         font-size: 1.5rem;
         margin-left: 10px;
     }
@@ -104,11 +111,12 @@ li {
 
 }
 
-@media screen and (min-width: 930px){
+@media screen and (min-width: 930px) {
     .menu {
         display: none;
     }
 }
+
 @media only screen and (max-width: 930px) {
     .navigation {
         display: none;
@@ -130,23 +138,23 @@ li {
         top: 100%;
         left: 0;
         width: 100%;
-        
+
     }
 
-   
+
 }
 
 
 h1 {
-    font-family: "Philly Sans"; 
+    font-family: "Philly Sans";
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    
+
 }
 
 h2 {
-    
+
     font-style: italic;
     text-align: center;
     text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.66);
@@ -156,12 +164,12 @@ h3 {
     align-self: center;
     font-family: 'Hind', sans-serif;
     font-size: 3rem;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-weight: 700;
 }
 
 h4 {
-    
+
     font-family: 'Courier Prime', monospace;
     margin-right: 10%;
     margin-left: 10%;
@@ -194,9 +202,9 @@ h5 {
     box-shadow: 0 0 5px gray;
     display: flex;
     flex-flow: row;
-   
 
-  
+
+
 }
 
 
@@ -204,26 +212,26 @@ h5 {
 /* Container holding images of three women */
 
 .woman-img {
-    position:relative;
+    position: relative;
     /* background-color: red; for debugging */
     padding-bottom: 0;
-    padding-left:0; 
+    padding-left: 0;
     left: 0;
     bottom: 0;
     width: 40%;
     height: 100%;
-    opacity: 0; 
-    transform: translateX(-100px); 
+    opacity: 0;
+    transform: translateX(-100px);
     transition: opacity 1s, transform 1s;
 
-} 
+}
 
-.woman-img .woman{
- 
+.woman-img .woman {
+
     padding: 0;
-} 
+}
 
-.greta, 
+.greta,
 .rosa,
 .lux {
     color: black;
@@ -254,30 +262,30 @@ h5 {
 }
 
 /*Images based on screen width*/
-@media screen and (min-width: 1465px){
-    .greta-img{
+@media screen and (min-width: 1465px) {
+    .greta-img {
         width: 55%
     }
 
-    .rosa-img{
+    .rosa-img {
         width: 55%
     }
 
-    .lux-img{
+    .lux-img {
         width: 55%
     }
 }
 
-@media screen and (min-width: 1600px){
-    .greta-img{
+@media screen and (min-width: 1600px) {
+    .greta-img {
         width: 45%
     }
 
-    .rosa-img{
+    .rosa-img {
         width: 45%
     }
 
-    .lux-img{
+    .lux-img {
         width: 45%
     }
 }
@@ -287,17 +295,17 @@ h5 {
     display: none
 }
 
-.greta-bubble{
+.greta-bubble {
     margin-left: 5vw;
     margin-top: 35vh;
 }
 
 /*Bubble inside greta-bubble container. It is the flipped bubble image
 set for desktop when greta is too close to the margin*/
-.spare-bubble{
+.spare-bubble {
     display: block;
     width: 20vw;
-    position:absolute;
+    position: absolute;
     z-index: 5;
 }
 
@@ -305,7 +313,7 @@ set for desktop when greta is too close to the margin*/
 .rosa-bubble {
     margin-left: 15vw;
     margin-top: -35vh;
-} 
+}
 
 .speech-bubble {
     width: 20vw;
@@ -317,7 +325,7 @@ set for desktop when greta is too close to the margin*/
     position: absolute;
     width: 30vw;
     z-index: 6;
-    
+
 }
 
 .bubble-text h5 {
@@ -326,151 +334,174 @@ set for desktop when greta is too close to the margin*/
 }
 
 /*for the spare bubble, the text floats over the bubble otherwise*/
-.greta-bubble .bubble-text{
+.greta-bubble .bubble-text {
     margin-top: 15vh;
 }
 
 
 /*for mobile*/
-@media screen and (max-width: 800px){
+@media screen and (min-width:250px) and (max-width: 450px) {
     .speech-bubble {
-    width: 40vw;
-    position:absolute;
-    z-index: 5;
-}
-
-    .greta-bubble .bubble-text{
-        margin-top: 0;
-        margin-right: 2vw;
+        width: 40vw;
+        position: absolute;
+        z-index: 5;
     }
 
-.greta-bubble .speech-bubble{
-    display: inline;
-    position: absolute;
-    z-index: 5;
-}
-.bubble-text {
-    position: absolute;
-    width: 40vw;
-    z-index: 6;
-    
-}
+    .greta-bubble .bubble-text {
+        margin-top: 0;
+        margin-left: 2vw;
+    }
 
-.bubble-text h5 {
-    font-size: 2vh;
-    margin-left: 3vw;
-}
+    .greta-bubble .speech-bubble {
+        display: inline;
+        position: absolute;
+        z-index: 5;
+    }
 
-.greta-bubble {
-    margin-left: -30vw;
-    margin-top: 10vh;
-   
-    /* ... */
-  }
+    .bubble-text {
+        position: absolute;
+        width: 40vw;
+        z-index: 6;
 
-  .spare-bubble{
-    display: none;
-  }
-  
-  .rosa-bubble {
-    margin-left: 12.5vw;
-    margin-top: -10vh;
-    /* ... */
-  }
-  
-  .lux-bubble {
-    margin-left: 25vw;
-    margin-top: 20vh;
-    /* ... */
-  }
+    }
+
+    .bubble-text h5 {
+        font-size: 2vh;
+        margin-left: 3vw;
+        font-size: 1.5vh;
+    }
+
+    .greta-bubble {
+        margin-left: -30vw;
+        margin-top: 10vh;
+
+        /* ... */
+    }
+
+    .spare-bubble {
+        display: none;
+    }
+
+    .rosa-bubble {
+        margin-left: 12.5vw;
+        margin-top: -10vh;
+        /* ... */
+    }
+
+    .lux-bubble {
+        margin-left: 25vw;
+        margin-top: 20vh;
+        /* ... */
+    }
 
 }
 
 /*ipad*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 451px) and (max-width: 775px) {
 
-    .speech-bubble {
-        width: 30vw;
+    .spare-bubble {
+        display: none;
+    }
+
+    .greta-bubble .bubble-text {
+        margin-top: 0;
+        margin-left: 2vw;
+    }
+
+    .greta-bubble .speech-bubble {
+        display: inline;
         position: absolute;
         z-index: 5;
     }
-    
+
+    .speech-bubble {
+        width: 35vw;
+        position: absolute;
+        z-index: 5;
+    }
+
     .bubble-text {
         position: absolute;
-        width: 30vw;
+        width: 35vw;
         z-index: 6;
-        
+
     }
-   
+    
+    .bubble-text h5{
+        margin-top: 5vh;
+
+    }
+
     .greta-bubble {
-        margin-left: -22vw;
+        margin-left: -29vw;
         margin-top: 5vh;
     }
 
 
     .rosa-bubble {
         margin-left: 15vw;
-        margin-top: -15vh;
-    }  
+        margin-top: -17vh;
+        
+    }
 
-    .lux-bubble{
+    .lux-bubble {
         margin-left: 25vw;
-        margin-top: 50vh;
+        margin-top: 20vh;
     }
 
 }
 
 /*small computer*/
 
-@media screen and (min-width: 912px){
+@media screen and (min-width: 912px) {
 
     .greta-bubble .speech-bubble {
         display: none
     }
 
-    .greta-bubble{
+    .greta-bubble {
         margin-left: 5vw;
         margin-top: 35vh;
     }
 
-    .spare-bubble{
+    .spare-bubble {
         display: block;
         width: 30vw;
-        position:absolute;
+        position: absolute;
         z-index: 5;
     }
 
 
     .rosa-bubble {
         margin-left: 15vw;
-    margin-top: -35vh;
-    } 
+        margin-top: -35vh;
+    }
 
     .speech-bubble {
         width: 30vw;
         position: absolute;
         z-index: 5;
     }
-    
+
     .bubble-text {
         position: absolute;
         width: 30vw;
         z-index: 6;
-        
+
     }
-    
+
     .bubble-text h5 {
         font-size: 2vh;
         margin-left: 5vw;
     }
 
-    .greta-bubble .bubble-text{
+    .greta-bubble .bubble-text {
         margin-top: 5vh;
     }
 }
 
-.title-text{
-    display:flex;
+.title-text {
+    display: flex;
     flex-flow: column;
     width: 75%;
     justify-content: space-around;
@@ -486,7 +517,7 @@ set for desktop when greta is too close to the margin*/
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 20px;
-    
+
 }
 
 .order-link {
@@ -505,16 +536,16 @@ set for desktop when greta is too close to the margin*/
 .order-link a {
     color: black;
     text-decoration: none;
-   
+
 }
 
 @media screen and (min-width: 350px) {
-    .hero-text{
+    .hero-text {
         margin-right: 0;
         margin-bottom: 10px;
     }
 
-    .woman-img{
+    .woman-img {
         margin-right: 0;
         align-self: center
     }
@@ -522,49 +553,49 @@ set for desktop when greta is too close to the margin*/
 
 @media screen and (max-width: 850px) {
     .title {
-        display:flex;
+        display: flex;
         flex-flow: column;
         justify-content: center;
         background-color: #EB5F0A;
         padding-bottom: 10%;
-        margin-top:10%;
-    
+        margin-top: 10%;
+
     }
 
-   
 
-    .title-text{
+
+    .title-text {
         font-size: 3rem;
         align-self: center;
-        
-    
+
+
     }
 
     .hero-text {
         font-size: 3rem;
-        margin-top:0;
+        margin-top: 0;
     }
-    
+
 }
 
 /* Card examples  */
 
-.about{
-    display:flex;
+.about {
+    display: flex;
     justify-content: center;
     flex-flow: column;
     width: 100%;
 
 }
 
-.about-heading{
+.about-heading {
     font-family: "Philly Sans";
     font-size: 4rem;
     padding-bottom: 20px;
-    
+
 }
 
-.about-text{
+.about-text {
     background-color: #d7e4f9;
     align-self: center;
     padding: 10px;
@@ -605,14 +636,15 @@ set for desktop when greta is too close to the margin*/
     align-self: center;
     padding: 10px;
     position: relative;
-    border: 10px solid white; 
-    border-radius: 0; 
+    border: 10px solid white;
+    border-radius: 0;
     padding: 10px;
 
-   
+
 }
 
-@media screen and (min-width: 1550px){
+@media screen and (min-width: 1550px) {
+
     .Activism,
     .Science,
     .Goddesses,
@@ -640,11 +672,11 @@ set for desktop when greta is too close to the margin*/
     background-color: #df9ac1;
 }
 
-.Science{
+.Science {
     background-color: #ffd52d;
 }
 
-.Goddesses{
+.Goddesses {
     background-color: #b90d0d;
 }
 
@@ -658,6 +690,7 @@ set for desktop when greta is too close to the margin*/
     justify-content: center;
     flex-flow: row;
 }
+
 .card1-Activism,
 .card1-Science,
 .card1-Goddesses,
@@ -665,14 +698,15 @@ set for desktop when greta is too close to the margin*/
 .card2-Activism,
 .card2-Science,
 .card2-Goddesses,
-.card2-Art{
+.card2-Art {
     z-index: 2;
-    perspective: 1500px; 
-    width: 300px; 
+    perspective: 1500px;
+    width: 300px;
     height: 300px;
     position: relative;
-    margin: 0 20px 20px 0; /* Added margin for spacing between cards */
-    display: inline-block; 
+    margin: 0 20px 20px 0;
+    /* Added margin for spacing between cards */
+    display: inline-block;
 }
 
 
@@ -680,26 +714,26 @@ set for desktop when greta is too close to the margin*/
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     transition: transform 0.7s;
 }
 
 .back {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 .card1-Activism:hover .front,
 .card1-Science:hover .front,
 .card1-Goddesses:hover .front,
-.card1-Art:hover .front{
-    transform: rotateY(180deg); 
+.card1-Art:hover .front {
+    transform: rotateY(180deg);
 }
 
 .card1-Activism:hover .back,
 .card1-Science:hover .back,
 .card1-Goddesses:hover .back,
-.card1-Art:hover .back{
-    transform: rotateY(360deg); 
+.card1-Art:hover .back {
+    transform: rotateY(360deg);
 }
 
 .card2-Activism:hover .front,
@@ -712,23 +746,24 @@ set for desktop when greta is too close to the margin*/
 .card2-Activism:hover .back,
 .card2-Science:hover .back,
 .card2-Goddesses:hover .back,
-.card2-Art:hover .back{
-    transform: rotateY(360deg); 
+.card2-Art:hover .back {
+    transform: rotateY(360deg);
 }
 
 .card-face img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
+
 @media screen and (max-width: 850px) {
-    .about-heading{
+    .about-heading {
         font-size: 3rem;
         padding-top: 20px;
         padding-bottom: 20px;
         margin-left: 10%;
         margin-right: 10%;
-        
+
     }
 
     .card-examples {
@@ -743,23 +778,23 @@ set for desktop when greta is too close to the margin*/
 }
 
 @media screen and (min-width: 350px) {
-    .card-face img{
+    .card-face img {
         width: 75%;
         object-fit: contain;
     }
-    
-    .card-face{
-        display:flex;
+
+    .card-face {
+        display: flex;
         justify-content: center;
     }
 
-    .card1-Activism, 
-    .card1-Science, 
-    .card1-Goddesses, 
-    .card1-Art, 
-    .card2-Activism, 
-    .card2-Science, 
-    .card2-Goddesses, 
+    .card1-Activism,
+    .card1-Science,
+    .card1-Goddesses,
+    .card1-Art,
+    .card2-Activism,
+    .card2-Science,
+    .card2-Goddesses,
     .card2-Art {
         margin: 0;
     }
@@ -775,8 +810,9 @@ set for desktop when greta is too close to the margin*/
     background-color: #b90d0d;
     box-shadow: 10px 8px black;
 }
+
 .artist-text h1 {
-    color:#FFD52D;
+    color: #FFD52D;
     text-shadow: 10px 8px black;
     font-size: 60px;
 }
@@ -797,7 +833,7 @@ set for desktop when greta is too close to the margin*/
 }
 
 @media only screen and (max-width: 850px) {
-  
+
     .artist-text {
         width: 100%;
         display: flex;
@@ -814,7 +850,7 @@ set for desktop when greta is too close to the margin*/
 
     .Jasmine {
         display: none;
-        
+
     }
 
     .artist-text h4 {
@@ -862,21 +898,21 @@ set for desktop when greta is too close to the margin*/
     padding: 20px;
     font-family: "Philly Sans";
     box-shadow: 10px 8px black;
-    
+
 }
 
 
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 850px) {
 
-    .donate-text h3{
+    .donate-text h3 {
         font-size: 2rem;
         text-align: center;
     }
 
-    .donate-btn{
+    .donate-btn {
         padding: 10px;
         box-shadow: 8px 6px black;
-    
+
     }
 }
