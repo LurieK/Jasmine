@@ -237,9 +237,6 @@ h5 {
     z-index: 2;
 }
 
-
-
-
 .rosa-img {
     position: absolute;
     bottom: 20%;
@@ -247,8 +244,6 @@ h5 {
     width: 60%;
     z-index: 1;
 }
-
-
 
 .lux-img {
     position: absolute;
@@ -258,6 +253,7 @@ h5 {
     z-index: 3;
 }
 
+/*Images based on screen width*/
 @media screen and (min-width: 1465px){
     .greta-img{
         width: 55%
@@ -286,13 +282,73 @@ h5 {
     }
 }
 
+/*Speech bubbles*/
+.greta-bubble .speech-bubble {
+    display: none
+}
+
+.greta-bubble{
+    margin-left: 5vw;
+    margin-top: 35vh;
+}
+
+/*Bubble inside greta-bubble container. It is the flipped bubble image
+set for desktop when greta is too close to the margin*/
+.spare-bubble{
+    display: block;
+    width: 20vw;
+    position:absolute;
+    z-index: 5;
+}
+
+
+.rosa-bubble {
+    margin-left: 15vw;
+    margin-top: -35vh;
+} 
 
 .speech-bubble {
+    width: 20vw;
+    position: absolute;
+    z-index: 5;
+}
+
+.bubble-text {
+    position: absolute;
+    width: 30vw;
+    z-index: 6;
+    
+}
+
+.bubble-text h5 {
+    font-size: 2vh;
+    margin-left: 5vw;
+}
+
+/*for the spare bubble, the text floats over the bubble otherwise*/
+.greta-bubble .bubble-text{
+    margin-top: 15vh;
+}
+
+
+/*for mobile*/
+@media screen and (max-width: 800px){
+    .speech-bubble {
     width: 40vw;
     position:absolute;
     z-index: 5;
 }
 
+    .greta-bubble .bubble-text{
+        margin-top: 0;
+        margin-right: 2vw;
+    }
+
+.greta-bubble .speech-bubble{
+    display: inline;
+    position: absolute;
+    z-index: 5;
+}
 .bubble-text {
     position: absolute;
     width: 40vw;
@@ -302,7 +358,7 @@ h5 {
 
 .bubble-text h5 {
     font-size: 2vh;
-    margin-left: 5vw;
+    margin-left: 3vw;
 }
 
 .greta-bubble {
@@ -328,9 +384,7 @@ h5 {
     /* ... */
   }
 
-
-
-
+}
 
 /*ipad*/
 @media screen and (min-width: 768px){
@@ -359,6 +413,11 @@ h5 {
         margin-top: -15vh;
     }  
 
+    .lux-bubble{
+        margin-left: 25vw;
+        margin-top: 50vh;
+    }
+
 }
 
 /*small computer*/
@@ -370,7 +429,8 @@ h5 {
     }
 
     .greta-bubble{
-        margin-left: 
+        margin-left: 5vw;
+        margin-top: 35vh;
     }
 
     .spare-bubble{
@@ -381,9 +441,33 @@ h5 {
     }
 
 
+    .rosa-bubble {
+        margin-left: 15vw;
+    margin-top: -35vh;
+    } 
 
+    .speech-bubble {
+        width: 30vw;
+        position: absolute;
+        z-index: 5;
+    }
+    
+    .bubble-text {
+        position: absolute;
+        width: 30vw;
+        z-index: 6;
+        
+    }
+    
+    .bubble-text h5 {
+        font-size: 2vh;
+        margin-left: 5vw;
+    }
+
+    .greta-bubble .bubble-text{
+        margin-top: 5vh;
+    }
 }
-
 
 .title-text{
     display:flex;
