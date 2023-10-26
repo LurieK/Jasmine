@@ -394,10 +394,11 @@ set for desktop when greta is too close to the margin*/
         /* ... */
     }
 
-}
+}50
 
 /*ipad*/
-@media screen and (min-width: 451px) and (max-width: 775px) {
+@media screen and (min-width: 451px) and (max-width: 650px){}
+@media screen and (min-width: 651px) and (max-width: 850px) {
 
     .spare-bubble {
         display: none;
@@ -422,14 +423,14 @@ set for desktop when greta is too close to the margin*/
 
     .bubble-text {
         position: absolute;
-        width: 35vw;
+        width: 33vw;
         z-index: 6;
 
     }
     
     .bubble-text h5{
         margin-top: 5vh;
-
+        font-size: 1.5vh;
     }
 
     .greta-bubble {
