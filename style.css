@@ -215,6 +215,7 @@ h5 {
     position: relative;
     /* background-color: red; for debugging */
     padding-bottom: 0;
+    align-self: center;
     padding-left: 0;
     left: 0;
     bottom: 0;
@@ -368,7 +369,7 @@ set for desktop when greta is too close to the margin*/
     .bubble-text h5 {
         font-size: 2vh;
         margin-left: 3vw;
-        font-size: 1.5vh;
+        font-size: 1vh;
     }
 
     .greta-bubble {
@@ -394,7 +395,7 @@ set for desktop when greta is too close to the margin*/
         /* ... */
     }
 
-}50
+}
 
 /*ipad*/
 @media screen and (min-width: 451px) and (max-width: 650px){}
