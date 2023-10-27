@@ -311,17 +311,17 @@ set for desktop when greta is too close to the margin*/
 /*Each bubble container positioning */
 .greta-bubble {
     margin-left: 5vw;
-    margin-top: 35vh;
+    margin-top: 65vh;
 }
 
 .rosa-bubble {
-    margin-left: 15vw;
-    margin-top: -35vh;
+    margin-left: 25vw;
+    margin-top: -5vh;
 }
 
 .lux-bubble {
-    margin-left: 25vw;
-    margin-top: 60vh;
+    margin-left: 35vw;
+    margin-top: 20vh;
 }
 
 
@@ -335,6 +335,8 @@ set for desktop when greta is too close to the margin*/
 .bubble-text h5 {
     font-size: 2vh;
     margin-left: 5vw;
+    position: absolute;
+    z-index: 6;
 }
 
 
@@ -345,7 +347,7 @@ set for desktop when greta is too close to the margin*/
 .greta-bubble,
 .rosa-bubble,
 .lux-bubble {
-    position: relative;
+    position: absolute;
     display: inline-block;
   }
   

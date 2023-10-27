@@ -36,7 +36,7 @@ const women = document.querySelectorAll(".woman");
 //listen for hover
 women.forEach(woman => {
     woman.addEventListener("mouseenter", function() {
-        const textElement = this.querySelector(".bubble-text");
+        const textElement = this.querySelector(".bubble-text h5");
         const text = getTextForWoman(this.classList[1]); 
         animateText(textElement, text);
     });
