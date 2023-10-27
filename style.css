@@ -292,42 +292,38 @@ h5 {
     }
 }
 
-/*Speech bubbles*/
-.greta-bubble .speech-bubble {
-    display: none
-}
-
-.greta-bubble {
-    margin-left: 5vw;
-    margin-top: 35vh;
-}
+/*Speech bubble animation*/
 
 /*Bubble inside greta-bubble container. It is the flipped bubble image
 set for desktop when greta is too close to the margin*/
 .spare-bubble {
-    display: none;
+    display: inline-block;
+    opacity: 1;
     width: 20vw;
     position: absolute;
     z-index: 5;
 }
 
+.greta-bubble .spare-bubble{
+    display: none;
+}
+
+/*Each bubble container positioning */
+.greta-bubble {
+    margin-left: 5vw;
+    margin-top: 35vh;
+}
 
 .rosa-bubble {
     margin-left: 15vw;
     margin-top: -35vh;
 }
 
-.lux-bubble{
+.lux-bubble {
     margin-left: 25vw;
     margin-top: 60vh;
 }
 
-.speech-bubble {
-    width: 20vw;
-    position: absolute;
-    z-index: 5;
-    display: none;
-}
 
 .bubble-text {
     position: absolute;
@@ -341,611 +337,63 @@ set for desktop when greta is too close to the margin*/
     margin-left: 5vw;
 }
 
-/*for the spare bubble, the text floats over the bubble otherwise*/
-.greta-bubble .bubble-text {
-    margin-top: 15vh;
-}
-
-/*hover animation*/
-.greta-img:hover .speech-bubble,
-.greta-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.greta-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
 
 /* Show the spare bubble on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-.greta-img:hover .speech-bubble,
-.greta-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.greta-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-/* spare bubble still hidden on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-
-.rosa-img:hover .speech-bubble,
-.rosa-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.rosa-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-.lux-img:hover .speech-bubble,
-.lux-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.lux-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
 
 
 
-/*for mobile*/
-@media screen and (min-width:250px) and (max-width: 450px) {
-    .speech-bubble {
-        width: 40vw;
-        position: absolute;
-        z-index: 5;
-        display:none;
-    }
+.greta-bubble,
+.rosa-bubble,
+.lux-bubble {
+    position: relative;
+    display: inline-block;
+  }
+  
+.speech-bubble {
+    display: none; /* Initially hide the speech bubble */
+    position: absolute;
+    width: 20vw;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+  
+.lux-img:hover + .lux-bubble .speech-bubble {
+    display: block; /* Show the speech bubble when .lux-img is hovered */
+  }
 
-    .greta-bubble .bubble-text {
-        margin-top: 0;
-        margin-left: 2vw;
-    }
+.rosa-img:hover + .rosa-bubble .speech-bubble {
+    display: block; /* Show the speech bubble when .lux-img is hovered */
+  }
 
-    .greta-bubble .speech-bubble {
-        display: none;
-        position: absolute;
-        z-index: 5;
+.greta-img:hover + .greta-bubble .spare-bubble {
+    display: block; /* Show the speech bubble when .lux-img is hovered */
+  }
+
+  /* @media screen and (min-width:250px) and (max-width: 450px){
+    .speech-bubble{
+        width:40vw;
     }
 
     .bubble-text {
-        position: absolute;
         width: 40vw;
-        z-index: 6;
-
     }
-
-    .bubble-text h5 {
-        margin-left: 4vw;
-        font-size: 1.5vh;
-    }
-
-    .hover-area:hover .speech-bubble,
-    .hover-area:hover .bubble-text {
-    display: block; /* show on hover */
-}
 
     .greta-bubble {
         margin-left: -30vw;
         margin-top: 10vh;
-
-        /* ... */
-    }
-
-    .spare-bubble {
-        display: none;
     }
 
     .rosa-bubble {
-        margin-left: 12.5vw;
-        margin-top: -10vh;
-        /* ... */
-    }
-
-    .lux-bubble {
-        margin-left: 25vw;
-        margin-top: 20vh;
-        /* ... */
-    }
-
-    /* Show the spare bubble on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-.greta-img:hover .speech-bubble,
-.greta-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.greta-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-/* spare bubble still hidden on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-
-.rosa-img:hover .speech-bubble,
-.rosa-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.rosa-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-.lux-img:hover .speech-bubble,
-.lux-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.lux-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-
-
-}
-
-/*ipad*/
-@media screen and (min-width: 451px) and (max-width: 650px){
-.speech-bubble {
-    width: 40vw;
-    position: absolute;
-    z-index: 5;
-    opacity
-}
-
-.greta-bubble .bubble-text {
-    margin-top: 0;
-    margin-left: 2vw;
-}
-
-.greta-bubble .speech-bubble {
-    display: block;
-    position: absolute;
-    z-index: 5;
-}
-
-.bubble-text {
-    position: absolute;
-    width: 40vw;
-    z-index: 6;
-
-}
-
-.bubble-text h5 {
-    margin-left: 5vw;
-    margin-top: 5vh;
-    font-size: 2vh;
-}
-
-.greta-bubble {
-    margin-left: -30vw;
-    margin-top: 10vh;
-
-    /* ... */
-}
-
-.spare-bubble {
-    display: none;
-}
-
-.hover-area:hover .speech-bubble,
-.hover-area:hover .bubble-text {
-display: block; /* show on hover */
-}
-
-.rosa-bubble {
-    margin-left: 15.5vw;
-    margin-top: -20vh;
-}
-
-.lux-bubble {
-    margin-left: 25vw;
-    margin-top: 20vh;
-    /* ... */
-}
-
-/* Show the spare bubble on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-.greta-img:hover .speech-bubble,
-.greta-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.greta-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-/* spare bubble still hidden on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-
-.rosa-img:hover .speech-bubble,
-.rosa-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.rosa-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-.lux-img:hover .speech-bubble,
-.lux-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.lux-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-
-
-}
-
-@media screen and (min-width: 651px) and (max-width: 850px) {
-
-    .spare-bubble {
-        display: block;
-        opacity:0;
-    }
-
-    .greta-bubble .bubble-text {
-        margin-top: 0;
-        margin-left: 2vw;
-    }
-
-    .greta-bubble .speech-bubble {
-        display: inline;
-        position: absolute;
-        z-index: 5;
-    }
-
-    .speech-bubble {
-        width: 35vw;
-        position: absolute;
-        z-index: 5;
-    }
-
-    .bubble-text {
-        position: absolute;
-        width: 33vw;
-        z-index: 6;
-
-    }
-    
-    .bubble-text h5{
-        margin-top: 5vh;
-        font-size: 2vh;
-    }
-
-    .hover-area:hover .speech-bubble,
-    .hover-area:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-    .greta-bubble {
-        margin-left: -29vw;
-        margin-top: 5vh;
-    }
-
-
-    .rosa-bubble {
-        margin-left: 15vw;
-        margin-top: -17vh;
-        
+        margin-left: 35vw;
+        margin-top: -40vh;
     }
 
     .lux-bubble {
         margin-left: 25vw;
         margin-top: 20vh;
     }
-
-    /* Show the spare bubble on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-.greta-img:hover .speech-bubble,
-.greta-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.greta-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-/* spare bubble still hidden on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-
-.rosa-img:hover .speech-bubble,
-.rosa-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.rosa-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-.lux-img:hover .speech-bubble,
-.lux-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.lux-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-
-
-}
-
-/*small computer*/
-
-@media screen and (min-width: 912px) and (max-width: 1090) {
-    .hero{
-        margin-top: 140px;
-    }
-    .greta-bubble .speech-bubble {
-        display: none
-    }
-
-    .greta-bubble {
-        margin-left: 5vw;
-        margin-top: 70vh;
-        position: absolute;
-    }
-
-    .spare-bubble {
-        display: block;
-        width: 25vw;
-        position: absolute;
-        z-index: 5;
-        opacity: 0;
-    }
-
-    .hover-area:hover .speech-bubble,
-    .hover-area:hover .spare-bubble,
-    .hover-area:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-    .rosa-bubble {
-        margin-left: 12vw;
-        margin-top: -5vh;
-        position: absolute;
-    }
-
-    .lux-bubble{
-        margin-left: 25vw;
-        margin-top: 20vh;
-    }
-
-    .speech-bubble {
-        width: 25vw;
-        position: absolute;
-        z-index: 5;
-    }
-
-    .bubble-text {
-        position: absolute;
-        width: 25vw;
-        z-index: 6;
-
-    }
-
-    .bubble-text h5 {
-        font-size: 2vh;
-        margin-left: 5vw;
-        margin-top: 5vh;
-    }
-
-    .greta-bubble .bubble-text {
-        margin-top: 10vh;
-    }
-
-    .greta-bubble .bubble-text h5 {
-        margin-top: 5vh;
-    }
-
-    /* Show the spare bubble on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-.greta-img:hover .speech-bubble,
-.greta-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.greta-bubble:hover .speech-bubble {
-    display: none;
-}
-
-/* spare bubble still hidden on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-    display: block;
-    opacity: 1;
-}
-
-
-.rosa-img:hover .speech-bubble,
-.rosa-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.rosa-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-.lux-img:hover .speech-bubble,
-.lux-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.lux-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-
-}
-/*larger desktop*/
-@media screen and (min-width: 1091px) and (max-width: 1590px) {
-    .hero{
-        margin-top: 9rem;
-        padding-top: 4rem;
-    }
-    .greta-bubble .speech-bubble {
-        display: none
-    }
-
-    .greta-bubble {
-        margin-left: 5vw;
-        margin-top: 70vh;
-        position: absolute;
-    }
-
-    .spare-bubble {
-        display: block;
-        width: 20vw;
-        position: absolute;
-        z-index: 5;
-        opacity:0;
-    }
-
-    .hover-area:hover .speech-bubble,
-    .hover-area:hover .spare-bubble,
-    .hover-area:hover .bubble-text {
-    display: block; /* show on hover */
-}
-    .rosa-bubble {
-        margin-left: 15vw;
-        margin-top: -20vh;
-        position: absolute;
-    }
-
-    .lux-bubble{
-        margin-left: 25vw;
-        margin-top: 20vh;
-    }
-
-    .speech-bubble {
-        width: 20vw;
-        position: absolute;
-        z-index: 5;
-    }
-
-    .bubble-text {
-        position: absolute;
-        width: 25vw;
-        z-index: 6;
-
-    }
-
-    .bubble-text h5 {
-        font-size: 2.5vh;
-        margin-left: 3vw;
-        margin-top: 5vh;
-    }
-
-    .greta-bubble .bubble-text {
-        margin-top: 10vh;
-    }
-
-    .greta-bubble .bubble-text h5 {
-        margin-top: 6vh;
-    }
-
-        /* Show the spare bubble on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-}
-
-.greta-img:hover .speech-bubble,
-.greta-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.greta-bubble:hover .speech-bubble {
-    display: none;
-}
-
-/* spare bubble still hidden on hover */
-.greta-bubble:hover .spare-bubble {
-    display: none;
-    display: block;
-    opacity: 1;
-}
-
-
-.rosa-img:hover .speech-bubble,
-.rosa-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.rosa-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-.lux-img:hover .speech-bubble,
-.lux-img:hover .bubble-text {
-    display: block; /* show on hover */
-}
-
-.lux-bubble:hover .speech-bubble {
-    display: block;
-    opacity: 1;
-}
-
-
-}
+  }
+ */
 
 
 
