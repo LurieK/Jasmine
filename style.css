@@ -346,10 +346,60 @@ set for desktop when greta is too close to the margin*/
     margin-top: 15vh;
 }
 
+/*hover animation*/
 .greta-img:hover .speech-bubble,
 .greta-img:hover .bubble-text {
     display: block; /* show on hover */
 }
+
+.greta-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+/* Show the spare bubble on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+.greta-img:hover .speech-bubble,
+.greta-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.greta-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+/* spare bubble still hidden on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+
+.rosa-img:hover .speech-bubble,
+.rosa-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.rosa-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+.lux-img:hover .speech-bubble,
+.lux-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.lux-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
 
 /*for mobile*/
 @media screen and (min-width:250px) and (max-width: 450px) {
@@ -411,6 +461,51 @@ set for desktop when greta is too close to the margin*/
         /* ... */
     }
 
+    /* Show the spare bubble on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+.greta-img:hover .speech-bubble,
+.greta-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.greta-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+/* spare bubble still hidden on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+
+.rosa-img:hover .speech-bubble,
+.rosa-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.rosa-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+.lux-img:hover .speech-bubble,
+.lux-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.lux-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
 }
 
 /*ipad*/
@@ -419,6 +514,7 @@ set for desktop when greta is too close to the margin*/
     width: 40vw;
     position: absolute;
     z-index: 5;
+    opacity
 }
 
 .greta-bubble .bubble-text {
@@ -427,7 +523,7 @@ set for desktop when greta is too close to the margin*/
 }
 
 .greta-bubble .speech-bubble {
-    display: none;
+    display: block;
     position: absolute;
     z-index: 5;
 }
@@ -472,12 +568,58 @@ display: block; /* show on hover */
     /* ... */
 }
 
+/* Show the spare bubble on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+.greta-img:hover .speech-bubble,
+.greta-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.greta-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+/* spare bubble still hidden on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+
+.rosa-img:hover .speech-bubble,
+.rosa-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.rosa-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+.lux-img:hover .speech-bubble,
+.lux-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.lux-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
 }
 
 @media screen and (min-width: 651px) and (max-width: 850px) {
 
     .spare-bubble {
-        display: none;
+        display: block;
+        opacity:0;
     }
 
     .greta-bubble .bubble-text {
@@ -531,6 +673,51 @@ display: block; /* show on hover */
         margin-top: 20vh;
     }
 
+    /* Show the spare bubble on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+.greta-img:hover .speech-bubble,
+.greta-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.greta-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+/* spare bubble still hidden on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+
+.rosa-img:hover .speech-bubble,
+.rosa-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.rosa-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+.lux-img:hover .speech-bubble,
+.lux-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.lux-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
 }
 
 /*small computer*/
@@ -554,6 +741,7 @@ display: block; /* show on hover */
         width: 25vw;
         position: absolute;
         z-index: 5;
+        opacity: 0;
     }
 
     .hover-area:hover .speech-bubble,
@@ -599,8 +787,54 @@ display: block; /* show on hover */
     .greta-bubble .bubble-text h5 {
         margin-top: 5vh;
     }
+
+    /* Show the spare bubble on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
 }
 
+.greta-img:hover .speech-bubble,
+.greta-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.greta-bubble:hover .speech-bubble {
+    display: none;
+}
+
+/* spare bubble still hidden on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+    display: block;
+    opacity: 1;
+}
+
+
+.rosa-img:hover .speech-bubble,
+.rosa-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.rosa-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+.lux-img:hover .speech-bubble,
+.lux-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.lux-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+
+}
+/*larger desktop*/
 @media screen and (min-width: 1091px) and (max-width: 1590px) {
     .hero{
         margin-top: 9rem;
@@ -617,10 +851,11 @@ display: block; /* show on hover */
     }
 
     .spare-bubble {
-        display: none;
+        display: block;
         width: 20vw;
         position: absolute;
         z-index: 5;
+        opacity:0;
     }
 
     .hover-area:hover .speech-bubble,
@@ -665,6 +900,51 @@ display: block; /* show on hover */
     .greta-bubble .bubble-text h5 {
         margin-top: 6vh;
     }
+
+        /* Show the spare bubble on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+}
+
+.greta-img:hover .speech-bubble,
+.greta-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.greta-bubble:hover .speech-bubble {
+    display: none;
+}
+
+/* spare bubble still hidden on hover */
+.greta-bubble:hover .spare-bubble {
+    display: none;
+    display: block;
+    opacity: 1;
+}
+
+
+.rosa-img:hover .speech-bubble,
+.rosa-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.rosa-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
+.lux-img:hover .speech-bubble,
+.lux-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
+.lux-bubble:hover .speech-bubble {
+    display: block;
+    opacity: 1;
+}
+
+
 }
 
 
