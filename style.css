@@ -367,9 +367,8 @@ set for desktop when greta is too close to the margin*/
     }
 
     .bubble-text h5 {
-        font-size: 2vh;
-        margin-left: 3vw;
-        font-size: 1vh;
+        margin-left: 4vw;
+        font-size: 1.5vh;
     }
 
     .greta-bubble {
@@ -398,7 +397,60 @@ set for desktop when greta is too close to the margin*/
 }
 
 /*ipad*/
-@media screen and (min-width: 451px) and (max-width: 650px){}
+@media screen and (min-width: 451px) and (max-width: 650px){
+.speech-bubble {
+    width: 40vw;
+    position: absolute;
+    z-index: 5;
+}
+
+.greta-bubble .bubble-text {
+    margin-top: 0;
+    margin-left: 2vw;
+}
+
+.greta-bubble .speech-bubble {
+    display: inline;
+    position: absolute;
+    z-index: 5;
+}
+
+.bubble-text {
+    position: absolute;
+    width: 40vw;
+    z-index: 6;
+
+}
+
+.bubble-text h5 {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    font-size: 2vh;
+}
+
+.greta-bubble {
+    margin-left: -30vw;
+    margin-top: 10vh;
+
+    /* ... */
+}
+
+.spare-bubble {
+    display: none;
+}
+
+.rosa-bubble {
+    margin-left: 15.5vw;
+    margin-top: -20vh;
+}
+
+.lux-bubble {
+    margin-left: 25vw;
+    margin-top: 20vh;
+    /* ... */
+}
+
+}
 @media screen and (min-width: 651px) and (max-width: 850px) {
 
     .spare-bubble {
