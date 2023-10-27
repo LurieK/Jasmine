@@ -305,7 +305,7 @@ h5 {
 /*Bubble inside greta-bubble container. It is the flipped bubble image
 set for desktop when greta is too close to the margin*/
 .spare-bubble {
-    display: block;
+    display: none;
     width: 20vw;
     position: absolute;
     z-index: 5;
@@ -326,6 +326,7 @@ set for desktop when greta is too close to the margin*/
     width: 20vw;
     position: absolute;
     z-index: 5;
+    display: none;
 }
 
 .bubble-text {
@@ -345,6 +346,10 @@ set for desktop when greta is too close to the margin*/
     margin-top: 15vh;
 }
 
+.greta-img:hover .speech-bubble,
+.greta-img:hover .bubble-text {
+    display: block; /* show on hover */
+}
 
 /*for mobile*/
 @media screen and (min-width:250px) and (max-width: 450px) {
@@ -352,6 +357,7 @@ set for desktop when greta is too close to the margin*/
         width: 40vw;
         position: absolute;
         z-index: 5;
+        display:none;
     }
 
     .greta-bubble .bubble-text {
@@ -360,7 +366,7 @@ set for desktop when greta is too close to the margin*/
     }
 
     .greta-bubble .speech-bubble {
-        display: inline;
+        display: none;
         position: absolute;
         z-index: 5;
     }
@@ -376,6 +382,11 @@ set for desktop when greta is too close to the margin*/
         margin-left: 4vw;
         font-size: 1.5vh;
     }
+
+    .hover-area:hover .speech-bubble,
+    .hover-area:hover .bubble-text {
+    display: block; /* show on hover */
+}
 
     .greta-bubble {
         margin-left: -30vw;
@@ -416,7 +427,7 @@ set for desktop when greta is too close to the margin*/
 }
 
 .greta-bubble .speech-bubble {
-    display: inline;
+    display: none;
     position: absolute;
     z-index: 5;
 }
@@ -443,6 +454,11 @@ set for desktop when greta is too close to the margin*/
 
 .spare-bubble {
     display: none;
+}
+
+.hover-area:hover .speech-bubble,
+.hover-area:hover .bubble-text {
+display: block; /* show on hover */
 }
 
 .rosa-bubble {
@@ -493,6 +509,11 @@ set for desktop when greta is too close to the margin*/
         font-size: 2vh;
     }
 
+    .hover-area:hover .speech-bubble,
+    .hover-area:hover .bubble-text {
+    display: block; /* show on hover */
+}
+
     .greta-bubble {
         margin-left: -29vw;
         margin-top: 5vh;
@@ -535,6 +556,11 @@ set for desktop when greta is too close to the margin*/
         z-index: 5;
     }
 
+    .hover-area:hover .speech-bubble,
+    .hover-area:hover .spare-bubble,
+    .hover-area:hover .bubble-text {
+    display: block; /* show on hover */
+}
 
     .rosa-bubble {
         margin-left: 12vw;
@@ -591,13 +617,17 @@ set for desktop when greta is too close to the margin*/
     }
 
     .spare-bubble {
-        display: block;
+        display: none;
         width: 20vw;
         position: absolute;
         z-index: 5;
     }
 
-
+    .hover-area:hover .speech-bubble,
+    .hover-area:hover .spare-bubble,
+    .hover-area:hover .bubble-text {
+    display: block; /* show on hover */
+}
     .rosa-bubble {
         margin-left: 15vw;
         margin-top: -20vh;
@@ -637,66 +667,7 @@ set for desktop when greta is too close to the margin*/
     }
 }
 
-/* @media screen and (min-width: 1291px) and (max-width: 1590px) {
-    .hero{
-        margin-top: 140px;
-    }
-    .greta-bubble .speech-bubble {
-        display: none
-    }
 
-    .greta-bubble {
-        margin-left: 5vw;
-        margin-top: 70vh;
-        position: absolute;
-    }
-
-    .spare-bubble {
-        display: block;
-        width: 20vw;
-        position: absolute;
-        z-index: 5;
-    }
-
-
-    .rosa-bubble {
-        margin-left: 15vw;
-        margin-top: -9vh;
-        position: absolute;
-    }
-
-    .lux-bubble{
-        margin-left: 25vw;
-        margin-top: 20vh;
-    }
-
-    .speech-bubble {
-        width: 20vw;
-        position: absolute;
-        z-index: 5;
-    }
-
-    .bubble-text {
-        position: absolute;
-        width: 25vw;
-        z-index: 6;
-
-    }
-
-    .bubble-text h5 {
-        font-size: 2vh;
-        margin-left: 3vw;
-        margin-top: 5vh;
-    }
-
-    .greta-bubble .bubble-text {
-        margin-top: 10vh;
-    }
-
-    .greta-bubble .bubble-text h5 {
-        margin-top: 5vh;
-    }
-} */
 
 .title-text {
     display: flex;
