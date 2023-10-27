@@ -31,11 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // //speech bubbles
 
+
+let isTyping = false; //boolean to check if animation is currently running
+
 const women = document.querySelectorAll(".woman");
 
 //listen for hover
 women.forEach(woman => {
     woman.addEventListener("mouseenter", function() {
+        if (isTyping) return; //if isTyping is true the animation will not run
         const textElement = this.querySelector(".bubble-text h5");
         const text = getTextForWoman(this.classList[1]); 
         animateText(textElement, text);
@@ -55,6 +59,7 @@ function getTextForWoman(name) {
 
 //typing animation
 function animateText(element, text) {
+    // clearTimeout(typingTimeout);
     element.textContent = "";
     let index = 0;
     console.log(text)//testing
