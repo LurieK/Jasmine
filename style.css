@@ -363,10 +363,6 @@ set for desktop when greta is too close to the margin*/
     z-index: 5;
 }
 
-.greta-bubble .spare-bubble{
-    /* display: block; */
-    /* display: inline-block; */
-}
 
 .greta-bubble .speech-bubble{
     display:none;
@@ -393,31 +389,62 @@ set for desktop when greta is too close to the margin*/
   }
   
 
-  /* @media screen and (min-width:250px) and (max-width: 450px){
+  @media screen and (min-width:250px) and (max-width: 930px){
+    .hero{
+        padding-top: 3rem;
+    }
+
+    .spare-bubble{
+        display:none
+    }
+
+    .greta-bubble .speech-bubble{
+        display: block;
+    }
+    
     .speech-bubble{
         width:40vw;
     }
 
     .bubble-text {
-        width: 40vw;
+        width: 20vw;
+        margin-left:-25px;
     }
 
     .greta-bubble {
-        margin-left: -30vw;
-        margin-top: 10vh;
+        margin-left: -10vw;
+        margin-top: -5vh;
     }
 
     .rosa-bubble {
         margin-left: 35vw;
-        margin-top: -40vh;
+        margin-top: -15vh;
     }
 
     .lux-bubble {
-        margin-left: 25vw;
+        margin-left: 40vw;
         margin-top: 20vh;
     }
+
+    .greta-bubble .bubble-text{
+        top: -10%;
+        left: -45%;
+        position: absolute;
+        display: inline-block;
+        z-index: 6;
+        vertical-align: middle;
+    }
+    
+    .greta-bubble .bubble-text h5 {
+        font-size: 2vh;
+        position: absolute;
+        z-index: 6;
+        margin-left: -80px;
+        width: 25vw;
+        margin-left: -25px;
+    }
   }
- */
+
 
 
 

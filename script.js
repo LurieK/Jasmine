@@ -47,7 +47,7 @@ women.forEach(woman => {
         // Get elements
         const textElement = this.querySelector(".bubble-text h5");
         let bubbleElement
-        if(window.innerWidth <= 768) {
+        if(window.innerWidth <= 908) {
             // Code for mobile
             bubbleElement = this.querySelector(".speech-bubble"); //on mobile we only need to target class .speech-bubble
             bubbleElement.style.opacity = '1';
