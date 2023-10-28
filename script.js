@@ -40,16 +40,23 @@ const women = document.querySelectorAll(".woman");
 women.forEach(woman => {
     woman.addEventListener("mouseenter", function() {
         // Hide all other bubbles
-        document.querySelectorAll('.speech-bubble, spare-bubble').forEach((bubble) => {
-            bubble.style.opacity = '0';
+        document.querySelectorAll('.speech-bubble, .spare-bubble').forEach((bubble) => {
+            bubble.style.opacity = '0';//set the opacity to 0
         });
 
         // Get elements
         const textElement = this.querySelector(".bubble-text h5");
-        const bubbleElement = this.querySelector(".speech-bubble, spare-bubble");
-
-        // Display bubble
-        bubbleElement.style.opacity = '1';
+        let bubbleElement
+        if(window.innerWidth <= 768) {
+            // Code for mobile
+            bubbleElement = this.querySelector(".speech-bubble"); //on mobile we only need to target class .speech-bubble
+            bubbleElement.style.opacity = '1';
+          } else {
+            // Code for desktop
+            bubbleElement = this.classList.contains('greta') ? this.querySelector(".spare-bubble") : this.querySelector(".speech-bubble");
+            bubbleElement.style.opacity = '1';
+          }
+          
 
         // Get text and start animation
         const text = getTextForWoman(this.classList[1]);
@@ -57,7 +64,7 @@ women.forEach(woman => {
 
         // Hide bubble and text when mouse leaves the image
         woman.addEventListener("mouseleave", function() {
-            bubbleElement.style.opacity = '0';
+            bubbleElement.style.opacity = '0';//revert back to 0 
             textElement.textContent = ''; // Clear the text
             clearTimeout(typingTimeout);
     
