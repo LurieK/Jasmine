@@ -294,24 +294,12 @@ h5 {
 
 /*Speech bubble animation*/
 
-/*Bubble inside greta-bubble container. It is the flipped bubble image
-set for desktop when greta is too close to the margin*/
-.spare-bubble {
-    display: inline-block;
-    opacity: 1;
-    width: 20vw;
-    position: absolute;
-    z-index: 5;
-}
 
-.greta-bubble .spare-bubble{
-    display: none;
-}
 
 /*Each bubble container positioning */
 .greta-bubble {
     margin-left: 5vw;
-    margin-top: 65vh;
+    margin-top: 45vh;
 }
 
 .rosa-bubble {
@@ -325,50 +313,73 @@ set for desktop when greta is too close to the margin*/
 }
 
 
+
 .bubble-text {
     position: absolute;
-    width: 30vw;
+    display: inline-block;
+    width: 10vw;
     z-index: 6;
+    vertical-align: middle;
+    
 
 }
 
 .bubble-text h5 {
     font-size: 2vh;
-    margin-left: 5vw;
     position: absolute;
     z-index: 6;
+    margin-left: -80px;
 }
 
 
 /* Show the spare bubble on hover */
 
+/*Bubble inside greta-bubble container. It is the flipped bubble image
+set for desktop when greta is too close to the margin*/
+.spare-bubble {
+    /* display: block; */
+    /* display: inline-block */
+    opacity: 0;
+    width: 20vw;
+    position: absolute;
+    z-index: 5;
+}
+
+.greta-bubble .spare-bubble{
+    /* display: block; */
+    display: inline-block;
+}
 
 
-.greta-bubble,
+.greta-bubble
 .rosa-bubble,
 .lux-bubble {
     position: absolute;
-    display: inline-block;
+    /* display: inline-block; */
+    display: block;
   }
   
 .speech-bubble {
-    display: none; /* Initially hide the speech bubble */
+    /* display: none; Initially hide the speech bubble */;
+    display: block;
+    /* display: inline-block; */
     position: absolute;
     width: 20vw;
     transform: translateX(-50%);
     z-index: 4;
+    opacity:0;
   }
   
-.lux-img:hover + .lux-bubble .speech-bubble {
-    display: block; /* Show the speech bubble when .lux-img is hovered */
+/* .lux-img:hover + .lux-bubble .speech-bubble {
+    display: block; Show the speech bubble when .lux-img is hovered */
   }
 
-.rosa-img:hover + .rosa-bubble .speech-bubble {
-    display: block; /* Show the speech bubble when .lux-img is hovered */
+/* .rosa-img:hover + .rosa-bubble .speech-bubble {
+    display: block; Show the speech bubble when .lux-img is hovered */
   }
 
-.greta-img:hover + .greta-bubble .spare-bubble {
-    display: block; /* Show the speech bubble when .lux-img is hovered */
+/* .greta-img:hover + .greta-bubble .spare-bubble {
+    display: block; Show the speech bubble when .lux-img is hovered */
   }
 
   /* @media screen and (min-width:250px) and (max-width: 450px){

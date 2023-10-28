@@ -32,50 +32,128 @@ document.addEventListener('DOMContentLoaded', function() {
 // //speech bubbles
 
 
-let isTyping = false; //boolean to check if animation is currently running
+let typingTimeout; // A timeout variable for the typing function
 
 const women = document.querySelectorAll(".woman");
 
-//listen for hover
+// Listen for hover
 women.forEach(woman => {
     woman.addEventListener("mouseenter", function() {
-        if (isTyping) return; //if isTyping is true the animation will not run
+        // Hide all other bubbles
+        document.querySelectorAll('.speech-bubble, spare-bubble').forEach((bubble) => {
+            bubble.style.opacity = '0';
+        });
+
+        // Get elements
         const textElement = this.querySelector(".bubble-text h5");
-        const text = getTextForWoman(this.classList[1]); 
+        const bubbleElement = this.querySelector(".speech-bubble, spare-bubble");
+
+        // Display bubble
+        bubbleElement.style.opacity = '1';
+
+        // Get text and start animation
+        const text = getTextForWoman(this.classList[1]);
         animateText(textElement, text);
+
+        // Hide bubble and text when mouse leaves the image
+        woman.addEventListener("mouseleave", function() {
+            bubbleElement.style.opacity = '0';
+            textElement.textContent = ''; // Clear the text
+            clearTimeout(typingTimeout);
+    
+        });
     });
 });
 
-//add text to speech bubble
+// Add text to speech bubble
 function getTextForWoman(name) {
     const texts = {
         greta: "This is Greta's quote.",
         rosa: "This is Rosa's quote.",
         lux: "This is Lux's quote."
     };
-
     return texts[name] || "";
 }
 
-//typing animation
+// Typing animation
 function animateText(element, text) {
-    // clearTimeout(typingTimeout);
+    clearTimeout(typingTimeout); // Clear existing timeout
     element.textContent = "";
     let index = 0;
-    console.log(text)//testing
-    console.log(element)//testing
+
     function type() {
-        //if index is less then the length of the text for the quote, only one letter 
-        //at a time will render on the screen.
         if (index < text.length) {
             element.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 100); 
+            typingTimeout = setTimeout(type, 100);
         }
     }
-
     type();
 }
+
+
+// let isTyping = false; //boolean to check if animation is currently running
+
+// const women = document.querySelectorAll(".woman");
+
+// //listen for hover
+// women.forEach(woman => {
+//     woman.addEventListener("mouseenter", function() {
+//         if (isTyping) return; //if isTyping is true the animation will not run
+
+//         document.querySelectorAll('.speech-bubble').forEach((bubble) => {
+//             bubble.style.display = 'none';
+//         });
+
+
+//         //get elements
+//         const textElement = this.querySelector(".bubble-text h5");
+//         const bubbleElement = this.querySelector(".speech-bubble")
+
+//         //display bubble
+//         bubbleElement.style.display = 'block';
+
+//         const text = getTextForWoman(this.classList[1]); 
+//         animateText(textElement, text);
+//     });
+// });
+
+// //add text to speech bubble
+// function getTextForWoman(name) {
+//     const texts = {
+//         greta: "This is Greta's quote.",
+//         rosa: "This is Rosa's quote.",
+//         lux: "This is Lux's quote."
+//     };
+
+//     return texts[name] || "";
+// }
+
+// //typing animation
+// function animateText(element, text, onComplete) {
+//     // clearTimeout(typingTimeout);
+//     isTyping = true;
+//     element.textContent = "";
+//     let index = 0;
+
+//     console.log(text)//testing
+//     console.log(element)//testing
+
+//     function type() {
+//         //if index is less then the length of the text for the quote, only one letter 
+//         //at a time will render on the screen.
+//         if (index < text.length) {
+//             element.textContent += text.charAt(index);
+//             index++;
+//             setTimeout(type, 100); 
+//         }else {
+//             isTyping = false;
+//             if (onComplete) onComplete()
+//         }
+//     }
+
+//     type();
+// }
 
 
 //tilt hero images 'dance'
