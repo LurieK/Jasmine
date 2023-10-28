@@ -301,32 +301,35 @@ h5 {
 .greta-bubble {
     margin-left: 5vw;
     margin-top: 45vh;
-    
+   
+
 }
 
 .rosa-bubble {
     margin-left: 25vw;
     margin-top: -55vh;
+   
 }
 
 .lux-bubble {
     margin-left: 35vw;
     margin-top: -25vh;
+    
 }
 
 .greta-bubble .bubble-text{
     position: absolute;
     display: inline-block;
-    width: 10vw;
     z-index: 6;
-    vertical-align: middle;
+    top: 100%;
+    left: 25%;
 }
 
 .greta-bubble .bubble-text h5 {
     font-size: 2vh;
     position: absolute;
     z-index: 6;
-    margin-left: -80px;
+    width: 15vw;
 }
 
 .bubble-text {
