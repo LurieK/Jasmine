@@ -30,46 +30,47 @@ document.addEventListener('DOMContentLoaded', function() {
  });
 
 // //speech bubbles
-
-
 let typingTimeout; // A timeout variable for the typing function
 
 const women = document.querySelectorAll(".woman");
 
-// Listen for hover
-women.forEach(woman => {
-    woman.addEventListener("mouseenter", function() {
-        // Hide all other bubbles
-        document.querySelectorAll('.speech-bubble, .spare-bubble').forEach((bubble) => {
-            bubble.style.opacity = '0';//set the opacity to 0
-        });
+function toggleBubbleVisibility(event) {
+    // Get the class name of the hovered image
+    const characterName = event.target.className;
+    console.log('your hovering over '+ characterName)//debugging
+    // Based on the character name, determine which bubble container to select
+    const bubbleContainer = document.querySelector(`.${characterName}-bubble-container`);
 
-        // Get elements
-        const textElement = this.querySelector(".bubble-text h5");
-        let bubbleElement
-        if(window.innerWidth <= 908) {
-            // Code for mobile
-            bubbleElement = this.querySelector(".speech-bubble"); //on mobile we only need to target class .speech-bubble
-            bubbleElement.style.opacity = '1';
-          } else {
-            // Code for desktop
-            bubbleElement = this.classList.contains('greta') ? this.querySelector(".spare-bubble") : this.querySelector(".speech-bubble");
-            bubbleElement.style.opacity = '1';
-          }
-          
+    // If a matching bubble container is found, toggle its visibility
+    if (bubbleContainer) {
+        const bubble = bubbleContainer.querySelector(`.${characterName}-bubble`);
+        const bubbleText = bubbleContainer.querySelector('.bubble-text');
 
-        // Get text and start animation
-        const text = getTextForWoman(this.classList[1]);
-        animateText(textElement, text);
+        // Toggle the display of the bubble and text
+        if (bubble.style.opacity === '0' || bubble.style.opacity === '') {
+            bubble.style.opacity = '1';
+            
+        
+            // Fetch the appropriate text for the character
+            const textForWoman = getTextForWoman(characterName);
+        
+            // Call the animateText function to display the text
+            animateText(bubbleText, textForWoman);
+        }  else {
+            bubble.style.opacity = '0';
+            bubbleText.style.opacity = '0';
+            console.log('hiding bubble for '+ characterName)
+        }
+    }else{
+        console.log('no bubble for '+ characterName)
+    }
+}
 
-        // Hide bubble and text when mouse leaves the image
-        woman.addEventListener("mouseleave", function() {
-            bubbleElement.style.opacity = '0';//revert back to 0 
-            textElement.textContent = ''; // Clear the text
-            clearTimeout(typingTimeout);
-    
-        });
-    });
+// Attach the event listener to the images
+const characters = document.querySelectorAll('.rosa, .greta, .lux');
+characters.forEach(character => {
+    character.addEventListener('mouseover', toggleBubbleVisibility);
+    character.addEventListener('mouseout', toggleBubbleVisibility);
 });
 
 // Add text to speech bubble
@@ -79,7 +80,9 @@ function getTextForWoman(name) {
         rosa: "This is Rosa's quote.",
         lux: "This is Lux's quote."
     };
+    console.log(texts[name])
     return texts[name] || "";
+    
 }
 
 // Typing animation
@@ -97,6 +100,38 @@ function animateText(element, text) {
     }
     type();
 }
+
+
+
+// // Listen for hover
+// women.forEach(woman => {
+//     woman.addEventListener("mouseenter", function() {
+//         // Hide all other bubbles
+//         document.querySelectorAll(".greta-bubble-container, .rosa-bubble-container, .lux-bubble-container").forEach((bubble) => {
+//             bubble.style.opacity = '0';//set the opacity to 0
+//         });
+
+//         // Get elements
+//         const textElement = this.querySelector(".bubble-text h5");
+//         const bubbleElement = this.querySelector(".greta-bubble-container, .rosa-bubble-container, .lux-bubble-container"); //on mobile we only need to target class .speech-bubble
+        
+//         bubbleElement.style.opacity = '1';
+        
+          
+
+//         // Get text and start animation
+//         const text = getTextForWoman(this.classList[1]);
+//         animateText(textElement, text);
+
+//         // Hide bubble and text when mouse leaves the image
+//         woman.addEventListener("mouseleave", function() {
+//             bubbleElement.style.opacity = '0';//revert back to 0 
+//             textElement.textContent = ''; // Clear the text
+//             clearTimeout(typingTimeout);
+    
+//         });
+//     });
+// });
 
 
 // let isTyping = false; //boolean to check if animation is currently running
