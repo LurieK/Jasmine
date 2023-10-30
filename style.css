@@ -233,7 +233,7 @@ h5 {
   .lux, .rosa, .greta,
   .lux-bubble-container, .rosa-bubble-container, .greta-bubble-container{
     object-fit: contain;       /* Ensures image covers the entire grid cell without distorting the aspect ratio */
-    object-position: center; /* Centers the image within its container */
+    object-position: top; /* Centers the image within its container */
     max-width: 100%;         /* Ensures the image doesn't grow beyond its grid cell */
     height: 100%;
   }
@@ -272,8 +272,8 @@ h5 {
   grid-template-columns: 1fr; 
   grid-template-rows: 1fr; 
   gap: 0px 0px; 
-  grid-template-areas: 
-    "bubble-text";
+    
+    position: relative;
    
 }
   
@@ -295,7 +295,21 @@ h5 {
     height: 100%;
     width: 100%;
     opacity:0;
+    grid-area: 1 / 1 / 2 / 2;
 }
+
+.bubble-text{
+    grid-area: 1 / 1 / 2 / 2; /* Same position in the grid as the image */
+  position: absolute; /* Makes the text float above the image */
+  bottom: 0; /* Align text to the bottom of the parent */
+}
+
+  
+.bubble-text h5 {
+    z-index:6;
+    color: black;
+    opacity:0;
+  }
   
   .title-text {  display: grid;
     grid-template-columns: 1fr;
@@ -361,13 +375,7 @@ h5 {
     
 
 } 
-  
-  .bubble-text h5 {
-    z-index:6;
-    color: black;
-    grid-area: bubble-text;
-    opacity:0;
-  }
+
 
 /* Container holding images of three women */
 
