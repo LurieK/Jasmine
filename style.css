@@ -255,19 +255,19 @@ h5 {
   
   .lux-bubble-container { 
     grid-area: 2 / 7 / 4 / 10; 
-    opacity:0;
+    opacity:1;
     
 }
   
   .rosa-bubble-container { 
     grid-area: 1 / 6 / 3 / 9; 
-    opacity:0;
+    opacity:1;
    
 }
   
   .greta-bubble-container { 
     grid-area: 2 / 1 / 4 / 4; 
-    opacity:0;
+    opacity:1;
    
 }
 

@@ -49,6 +49,7 @@ function toggleBubbleVisibility(event) {
         // Toggle the display of the bubble and text
         if (bubble.style.opacity === '0' || bubble.style.opacity === '') {
             bubble.style.opacity = '1';
+            bubbleText.style.opacity = '1;'
             
         
             // Fetch the appropriate text for the character
