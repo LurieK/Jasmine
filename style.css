@@ -147,7 +147,6 @@ li {
 
 h1 {
     font-family: "Philly Sans";
-    /* font-size: 2rem; */
     font-weight: bold;
     text-align: center;
 
@@ -187,7 +186,6 @@ h5 {
     display: flex;
     justify-content: center;
     margin-top: 9.5rem;
-    padding-top: 7rem;
     z-index: 2;
     justify-content: center;
     flex-flow: column;
@@ -199,16 +197,14 @@ h5 {
     background-color: #EB5F0A;
     background-position: top;
     background-size: cover;
+
     position: relative;
     width: 86%;
     height: 500px;
-    /* padding-top: 10%; */
-    /* color: white; */
     box-shadow: 0 0 5px gray;
-    /* display: flex;
-    flex-flow: row;*/
     align-self: center;
-    justify-self: center; 
+    justify-self: center;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -219,9 +215,10 @@ h5 {
 
 }
 
+/*Woman image and bubble styling*/
 
-  
-  .woman {  display: grid;
+.woman {
+    display: grid;
     grid-template-columns: repeat(9, 75px);
     grid-template-rows: repeat(4, 125px);
     gap: 0px 0px;
@@ -231,122 +228,134 @@ h5 {
     z-index: 2;
     position: absolute;
     margin-left: -80px;
-  }
+}
 
-  .lux, .rosa, .greta,
-  .lux-bubble-container, .rosa-bubble-container, .greta-bubble-container{
-    object-fit: contain;       /* Ensures image covers the entire grid cell without distorting the aspect ratio */
-    object-position: top; /* Centers the image within its container */
-    max-width: 100%;         /* Ensures the image doesn't grow beyond its grid cell */
+.lux,
+.rosa,
+.greta,
+.lux-bubble-container,
+.rosa-bubble-container,
+.greta-bubble-container {
+    object-fit: contain;
+    /* Ensures image covers the entire grid cell without distorting the aspect ratio */
+    object-position: top;
+    /* Centers the image within its container */
+    max-width: 100%;
+    /* Ensures the image doesn't grow beyond its grid cell */
     height: 100%;
-  }
-  
-  .lux { 
-    grid-area: 3 / 6 / 5 / 9; 
-   
 }
-  
-  .rosa { 
-    grid-area: 2 / 5/ 4 / 8; 
+
+.lux {
+    grid-area: 3 / 6 / 5 / 9;
 
 }
-  
-  .greta { 
-    grid-area: 3 / 3 / 5 / 6; 
-   
+
+.rosa {
+    grid-area: 2 / 5/ 4 / 8;
+
 }
-  
-  .lux-bubble-container { 
-    grid-area: 2 / 7 / 4 / 10; 
-    opacity:1;
-    display: grid; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  position:relative
-    
+
+.greta {
+    grid-area: 3 / 3 / 5 / 6;
+
 }
-  
-  .rosa-bubble-container { 
-    grid-area: 1 / 6 / 3 / 9; 
-    opacity:1;
-    display: grid; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-    
+
+.lux-bubble-container {
+    grid-area: 2 / 7 / 4 / 10;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    position: relative
+}
+
+.rosa-bubble-container {
+    grid-area: 1 / 6 / 3 / 9;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+
     position: relative;
-   
-}
-  
-  .greta-bubble-container { 
-    grid-area: 2 / 1 / 4 / 4; 
-    opacity:1;
-    display: grid; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  position: relative;
-   
+
 }
 
-.greta-bubble, 
+.greta-bubble-container {
+    grid-area: 2 / 1 / 4 / 4;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    position: relative;
+
+}
+
+.greta-bubble,
 .rosa-bubble,
 .lux-bubble {
     height: 100%;
     width: 100%;
-    opacity:0;
+    opacity: 0;
     grid-area: 1 / 1 / 2 / 2;
 }
 
-.bubble-text{
-    grid-area: 1 / 1 / 2 / 2; 
-    position: absolute; 
+.bubble-text {
+    grid-area: 1 / 1 / 2 / 2;
+    position: absolute;
     top: 0;
     width: 160px;
 }
 
-  
+
 .bubble-text h5 {
-    z-index:6;
+    z-index: 6;
     color: black;
-    opacity:0;
-    margin-left:20px
-  }
-  
-  .title-text {  display: grid;
+    opacity: 0;
+    margin-left: 20px
+}
+
+/*Title text styling */
+
+.title-text {
+    display: grid;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(2, 150px);
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "."
-      "hero-text"
-      "."
-      "button"
-      ".";
+        "."
+        "hero-text"
+        "."
+        "button"
+        ".";
     grid-area: title;
     align-items: end;
     z-index: 1;
     position: absolute;
-  }
-  
-  .button {  display: grid;
+}
+
+.button {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". . ."
-      ". order-link ."
-      ". . .";
-      grid-area: 3/2/4/3;
+        ". . ."
+        ". order-link ."
+        ". . .";
+    grid-area: 3/2/4/3;
     width: 50%
-  }
-  
-  .order-link { grid-area: order-link; }
+}
 
-  .hero-text {
+.order-link {
+    grid-area: order-link;
+}
+
+.hero-text {
     color: #FFD52D;
     text-shadow: 10px 8px black;
     font-size: 3rem;
@@ -362,7 +371,7 @@ h5 {
 .order-link {
     background: white;
     align-self: center;
-    text-align:center;
+    text-align: center;
     font-size: 22px;
     line-height: 22px;
     padding: 15px;
@@ -377,292 +386,17 @@ h5 {
 .order-link a {
     color: black;
     text-decoration: none;
-    
 
-} 
-
-
-/* Container holding images of three women */
-
-
-
-.woman-img {
-    /* position: relative; */
-    /* background-color: red; for debugging */
-    /* padding-bottom: 0;
-    align-self: center;
-    padding-left: 0;
-    left: 0;
-    bottom: 0;
-    width: 40%;
-    height: 100%;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 1s, transform 1s; */
 
 }
 
-.woman-img .woman {
-
-    /* padding: 0; */
-}
-
-.greta,
-.rosa,
-.lux {
-    /* color: black; */
-}
-
-
-/*Images based on screen width*/
-@media screen and (min-width: 1465px) {
-    .greta-img {
-        width: 55%
-    }
-
-    .rosa-img {
-        width: 55%
-    }
-
-    .lux-img {
-        width: 55%
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    .greta-img {
-        width: 45%
-    }
-
-    .rosa-img {
-        width: 45%
-    }
-
-    .lux-img {
-        width: 45%
-    }
-}
-
-/*Speech bubble animation*/
-
-
-
-
-/*Each bubble container positioning */
-/* .greta-bubble {
-    margin-left: 5vw;
-    margin-top: 45vh;
-   
-
-}
-
-.rosa-bubble {
-    margin-left: 25vw;
-    margin-top: -55vh;
-   
-}
-
-.lux-bubble {
-    margin-left: 35vw;
-    margin-top: -25vh;
-    
-}
-
-.greta-bubble .bubble-text{
-    position: absolute;
-    display: inline-block;
-    z-index: 6;
-    top: 100%;
-    left: 25%;
-}
-
-.greta-bubble .bubble-text h5 {
-    font-size: 2vh;
-    position: absolute;
-    z-index: 6;
-    width: 15vw;
-}
-
-.bubble-text {
-    position: absolute;
-    display: inline-block;
-    width: 10vw;
-    z-index: 6;
-    vertical-align: middle;
-    
-
-}
-
-.bubble-text h5 {
-    font-size: 2vh;
-    position: absolute;
-    z-index: 6;
-    margin-left: -80px;
-} */
-
-
-/* Show the spare bubble on hover */
-
-/*Bubble inside greta-bubble container. It is the flipped bubble image
-set for desktop when greta is too close to the margin*/
-/* .spare-bubble {
-  
-    display: inline-block;
-    opacity: 0;
-    width: 20vw;
-    position: absolute;
-    z-index: 5;
-}
-
-
-.greta-bubble .speech-bubble{
-    display:none;
-}
-
-
-.greta-bubble
-.rosa-bubble,
-.lux-bubble {
-    position: absolute;
-    display: inline-block;
-   
-  }
-  
-.speech-bubble {
-   
-    display: block;
-
-    position: absolute;
-    width: 20vw;
-    transform: translateX(-50%);
-    z-index: 4;
-    opacity:0;
-  }
-  
-
-  @media screen and (min-width:250px) and (max-width: 930px){
-    .hero{
-        padding-top: 3rem;
-    }
-
-    .spare-bubble{
-        display:none
-    }
-
-    .greta-bubble .speech-bubble{
-        display: block;
-    }
-    
-    .speech-bubble{
-        width:40vw;
-    }
-
-    .bubble-text {
-        width: 20vw;
-        margin-left:-25px;
-    }
-
-    .greta-bubble {
-        margin-left: -10vw;
-        margin-top: -5vh;
-    }
-
-    .rosa-bubble {
-        margin-left: 35vw;
-        margin-top: -15vh;
-    }
-
-    .lux-bubble {
-        margin-left: 40vw;
-        margin-top: 20vh;
-    }
-
-    .greta-bubble .bubble-text{
-        top: -10%;
-        left: -45%;
-        position: absolute;
-        display: inline-block;
-        z-index: 6;
-        vertical-align: middle;
-    }
-    
-    .greta-bubble .bubble-text h5 {
-        font-size: 2vh;
-        position: absolute;
-        z-index: 6;
-        margin-left: -80px;
-        width: 25vw;
-        margin-left: -25px;
-    }
-  } */
-
-/*mobile*/
-/* @media screen and (min-width:250px) and (max-width: 450px){
-    .speech-bubble{
-        width:60vw;
-    }
-
-    .lux-bubble {
-        margin-left: 40vw;
-        margin-top: 10vh;
-    }
-} */
-
-
-/* .title-text {
-    display: flex;
-    flex-flow: column;
-    width: 75%;
-    justify-content: space-around; */
-    /* padding-top: 10%;
-    margin-left: 30%; */
-
-/* } */
 
 
 
 
 
-  
-
-@media screen and (min-width: 350px) {
-    .hero-text {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .woman-img {
-        margin-right: 0;
-        align-self: center
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .title {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        background-color: #EB5F0A;
-        padding-bottom: 10%;
-        margin-top: 10%;
-
-    }
 
 
-
-    .title-text {
-        font-size: 3rem;
-        align-self: center;
-
-
-    }
-
-    .hero-text {
-        font-size: 3rem;
-        margin-top: 0;
-    }
-
-}
 
 /* Card examples  */
 
