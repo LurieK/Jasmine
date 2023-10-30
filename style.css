@@ -10,6 +10,7 @@ html {
     padding: 0;
     width: 100%;
 
+
 }
 
 body {
@@ -392,7 +393,74 @@ h5 {
 
 
 
+@media screen and (min-width: 250px) and (max-width: 850px){
+    .title{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "woman"
+        "title";
+        height: 625px;
+    }
 
+    .woman{
+        grid-template-columns: repeat(9, 35px);
+        grid-template-rows: repeat(4, 85px);
+        margin-left: -30px;
+        margin-right: -30px;
+        /* margin-top: -80px; */
+
+    }
+
+
+    .title-text {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+           'hero-text'
+            'button';
+    }
+
+    .hero-text{
+        grid-area: hero-text;
+        font-size: 2rem;
+        margin-bottom: 0;
+        align-self: center;
+        justify-self: center;
+        margin-right:15px;
+        margin-left:15px;
+    }
+
+    .hero-text h1{
+        margin:0;
+    }
+
+    .button{
+        grid-area: button;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .lux-bubble-container,
+    .rosa-bubble-container,
+    .greta-bubble-container{
+        object-fit: contain;
+    }
+
+    .rosa-bubble-container{
+        grid-area: 1 / 7 / 3 / 11;
+    }
+
+    .greta-bubble-container{
+        grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .lux-bubble-container{
+        grid-area: 2 / 7 / 4 / 11;
+    }
+
+}
 
 
 
@@ -407,6 +475,8 @@ h5 {
     width: 100%;
 
 }
+
+
 
 .about-heading {
     font-family: "Philly Sans";
@@ -424,6 +494,12 @@ h5 {
     padding: 40px;
     box-shadow: 10px 8px black;
     width: 80%
+}
+
+@media screen (min-width: 250px) {
+    .about-text{
+        width: 70%;
+    }
 }
 
 .cards {
