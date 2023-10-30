@@ -39,11 +39,12 @@ function toggleBubbleVisibility(event) {
     const characterName = event.target.className;
     console.log('your hovering over '+ characterName)//debugging
     // Based on the character name, determine which bubble to select
-    const bubble = document.querySelector(`.${characterName}-bubble`);
+    const bubbleContainer = document.querySelector(`.${characterName}-bubble-container`);
 
     // If a matching bubble container is found, toggle its visibility
-    if (bubble) {
-        const bubbleText = bubble.querySelector('.bubble-text h5');
+    if (bubbleContainer) {
+        const bubbleText = bubbleContainer.querySelector('.bubble-text h5');
+        const bubble = bubbleContainer.querySelector(`.${characterName}-bubble`)
 
         // Toggle the display of the bubble and text
         if (bubble.style.opacity === '0'|| bubble.style.opacity === '') {
