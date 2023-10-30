@@ -38,25 +38,26 @@ function toggleBubbleVisibility(event) {
     // Get the class name of the hovered image
     const characterName = event.target.className;
     console.log('your hovering over '+ characterName)//debugging
-    // Based on the character name, determine which bubble container to select
-    const bubbleContainer = document.querySelector(`.${characterName}-bubble-container`);
+    // Based on the character name, determine which bubble to select
+    const bubble = document.querySelector(`.${characterName}-bubble`);
 
     // If a matching bubble container is found, toggle its visibility
-    if (bubbleContainer) {
-        const bubble = bubbleContainer.querySelector(`.${characterName}-bubble`);
-        const bubbleText = bubbleContainer.querySelector('.bubble-text');
+    if (bubble) {
+        const bubbleText = bubble.querySelector('.bubble-text h5');
 
         // Toggle the display of the bubble and text
-        if (bubble.style.opacity === '0' || bubble.style.opacity === '') {
+        if (bubble.style.opacity === '0'|| bubble.style.opacity === '') {
             bubble.style.opacity = '1';
-            bubbleText.style.opacity = '1;'
+            bubbleText.style.opacity = '1';
             
-        
+            console.log(`set ${characterName} to opacity 1`)
             // Fetch the appropriate text for the character
             const textForWoman = getTextForWoman(characterName);
         
             // Call the animateText function to display the text
             animateText(bubbleText, textForWoman);
+            console.log(`animating ${characterName} text`)
+
         }  else {
             bubble.style.opacity = '0';
             bubbleText.style.opacity = '0';
