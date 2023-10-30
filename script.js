@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     
 
-    const elementsToAnimate = document.querySelectorAll('.Jasmine, .woman-img, .about-heading, h4, h3, .card-examples, .donate-text, .artist-text');
+    const elementsToAnimate = document.querySelectorAll('.Jasmine, .woman, .about-heading, h4, h3, .card-examples, .donate-text, .artist-text');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 console.log(entry.target.className)
                 entry.target.style.opacity = '1';
-                if (entry.target.classList.contains('woman-img')) {
+                if (entry.target.classList.contains('woman')) {
                     console.log("running woman-img animation")
                     entry.target.style.transform = 'translateX(0)';
                 } else {

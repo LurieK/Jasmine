@@ -229,6 +229,12 @@ h5 {
     z-index: 2;
     position: absolute;
     margin-left: -80px;
+    /*for initial animation*/
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: opacity 1s, transform 1s;
+    
+    
 }
 
 .lux,
@@ -496,7 +502,7 @@ h5 {
     width: 80%
 }
 
-@media screen (min-width: 250px) {
+@media screen and (min-width: 250px) {
     .about-text{
         width: 70%;
     }
