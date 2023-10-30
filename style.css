@@ -256,18 +256,36 @@ h5 {
   .lux-bubble-container { 
     grid-area: 2 / 7 / 4 / 10; 
     opacity:1;
+    display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "bubble-text";
     
 }
   
   .rosa-bubble-container { 
     grid-area: 1 / 6 / 3 / 9; 
     opacity:1;
+    display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "bubble-text";
    
 }
   
   .greta-bubble-container { 
     grid-area: 2 / 1 / 4 / 4; 
     opacity:1;
+    display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "bubble-text";
    
 }
 
@@ -346,6 +364,8 @@ h5 {
   
   .bubble-text {
     z-index:6;
+    color: black;
+    grid-area: bubble-text;
   }
 
 /* Container holding images of three women */
