@@ -524,13 +524,17 @@ h5 {
     }
 
     .lux-bubble-container{
-        grid-row-start: 1;
-        grid-row-end: 3;
+        grid-area: 2/8/4/11;
     }
 
     .greta-bubble-container{
         height: 70%;
 } 
+
+    .bubble-text{
+        margin-left: 10px;
+        top: 2px;
+    }
 }
 
 @media screen and (min-width: 820px) and (max-width:920px) {
@@ -541,8 +545,23 @@ h5 {
         
     }
 
+    .greta-bubble-container{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
     .lux-bubble-container{
-        grid-area: 2/8/3/12;
+        grid-area: 2/8/3/11;
+    }
+
+    .rosa-bubble-container{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 7;
+        grid-column-end: 10;
+        
     }
 }
 @media screen and (min-width: 910px) {
