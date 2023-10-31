@@ -490,6 +490,10 @@ h5 {
         align-items: start;
     }
 
+    .donate-btn{
+        width: 30%;
+    }
+
 }
 
 
@@ -523,28 +527,6 @@ h5 {
         margin:0;
     }
 
-    .lux-bubble-container{
-        grid-area: 2/8/4/11;
-    }
-
-    .greta-bubble-container{
-        height: 70%;
-} 
-
-    .bubble-text{
-        margin-left: 10px;
-        top: 2px;
-    }
-}
-
-@media screen and (min-width: 820px) and (max-width:920px) {
-    .woman {
-        grid-template-columns: repeat(11, 70px);
-        grid-template-rows: repeat(6, 100px);
-        margin-top:-30px;
-        
-    }
-
     .greta-bubble-container{
         grid-row-start: 2;
         grid-row-end: 4;
@@ -563,6 +545,22 @@ h5 {
         grid-column-end: 10;
         
     }
+
+    .bubble-text{
+        margin-left: 10px;
+        top: 2px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width:920px) {
+    .woman {
+        grid-template-columns: repeat(11, 70px);
+        grid-template-rows: repeat(6, 100px);
+        margin-top:-30px;
+        
+    }
+
+    
 }
 @media screen and (min-width: 910px) {
     .hero-text h1{
@@ -891,13 +889,14 @@ h5 {
 .donate-btn {
     background-color: #df9ac1;
     width: 20%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     align-self: center;
     padding: 10px;
     border: 5px solid white;
     border-radius: 0;
     padding: 20px;
     font-family: "Philly Sans";
+    font-size: 20px;
     box-shadow: 10px 8px black;
 
 }
@@ -909,11 +908,13 @@ h5 {
     .donate-text h3 {
         font-size: 2rem;
         text-align: center;
+        
     }
 
     .donate-btn {
         padding: 10px;
         box-shadow: 8px 6px black;
+        width:40%;
 
     }
 }
