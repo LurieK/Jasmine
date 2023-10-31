@@ -217,15 +217,17 @@ h5 {
 }
 
 /*Woman image and bubble styling*/
-
+.body{
+    width: 90%;
+}
 .woman {
     display: grid;
     grid-template-columns: repeat(9, 75px);
     grid-template-rows: repeat(4, 125px);
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-area: woman;
-    align-items: end;
+    grid-area: start;
+    /* align-items: end; */
     z-index: 2;
     position: absolute;
     margin-left: -80px;
@@ -328,15 +330,15 @@ h5 {
 
 .title-text {
     display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 150px);
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "."
         "hero-text"
         "."
-        "button"
+        "order-link"
         ".";
     grid-area: title;
     align-items: end;
@@ -344,22 +346,10 @@ h5 {
     position: absolute;
 }
 
-.button {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        ". . ."
-        ". order-link ."
-        ". . .";
-    grid-area: 3/2/4/3;
-    width: 50%
-}
+
 
 .order-link {
-    grid-area: order-link;
+    grid-area: 3/2/3/3;
 }
 
 .hero-text {
@@ -398,8 +388,8 @@ h5 {
 }
 
 
-
-@media screen and (min-width: 250px) and (max-width: 850px){
+/*mobile*/
+@media screen and (min-width: 250px) and (max-width: 900px) {
     .title{
         display: grid;
         grid-template-columns: 1fr;
@@ -410,12 +400,14 @@ h5 {
         height: 625px;
     }
 
+
     .woman{
-        grid-template-columns: repeat(9, 35px);
+        grid-template-columns: repeat(11, 35px);
         grid-template-rows: repeat(4, 85px);
         margin-left: -30px;
         margin-right: -30px;
         /* margin-top: -80px; */
+        justify-self: center;
 
     }
 
@@ -425,7 +417,7 @@ h5 {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
            'hero-text'
-            'button';
+            'order-link';
     }
 
     .hero-text{
@@ -442,8 +434,8 @@ h5 {
         margin:0;
     }
 
-    .button{
-        grid-area: button;
+    .order-link{
+        grid-area: order-link;
         align-self: center;
         justify-self: center;
     }
@@ -455,21 +447,109 @@ h5 {
     }
 
     .rosa-bubble-container{
-        grid-area: 1 / 7 / 3 / 11;
+       
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 75%;
+        grid-column-start: 7 ;
+        grid-column-end: 12;
+        width: 100%;
+        align-items: start;
+        
+    }
+
+    .rosa {
+        grid-area: 2 / 6/ 4 / 9;
     }
 
     .greta-bubble-container{
-        grid-area: 1 / 1 / 2 / 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 75%;
+        grid-column-end: 6;
+        width: 95%;
+        align-items: start;
+    }
+    
+    .greta{
+        grid-area: 3/4/5/7;
     }
 
+    .lux {
+        grid-area: 3/7/5/10;
+        
+    }
+
+
     .lux-bubble-container{
-        grid-area: 2 / 7 / 4 / 11;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        height: 100%;
+        grid-column-end: 12;
+        width: 100%;
+        align-items: start;
     }
 
 }
 
 
 
+
+/*tablet*/
+
+ @media screen and (min-width: 760px) and (max-width: 900px) {
+    .title{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "woman"
+        "title";
+        height: 725px;
+    }
+    
+    .woman {
+        grid-template-columns: repeat(11, 70px);
+        grid-template-rows: repeat(4, 100px);
+        margin-top:-30px;
+        justify-self: center;
+        width: fit-content
+    }
+
+    .title-text{
+        padding-top: 30px;
+    }
+    .hero-text h1{
+        margin:0;
+    }
+
+    .lux-bubble-container{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .greta-bubble-container{
+        height: 70%;
+} 
+}
+
+@media screen and (min-width: 820px) and (max-width:920px) {
+    .woman {
+        grid-template-columns: repeat(11, 70px);
+        grid-template-rows: repeat(6, 100px);
+        margin-top:-30px;
+        
+    }
+
+    .lux-bubble-container{
+        grid-area: 2/8/3/12;
+    }
+}
+@media screen and (min-width: 910px) {
+    .hero-text h1{
+        margin:0;
+    }
+}
 
 
 /* Card examples  */
