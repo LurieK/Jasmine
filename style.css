@@ -198,6 +198,8 @@ h5 {
     background-color: #EB5F0A;
     background-position: top;
     background-size: cover;
+    transform: translate3d(0,0,0); 
+    backface-visibility: hidden;
 
     position: relative;
     width: 86%;
