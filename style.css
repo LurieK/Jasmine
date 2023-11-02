@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Philly Sans";
-    src: url("./philly_sans.woff");
+    /* src: url("./philly_sans.woff"); for local use*/
+    src: url('https://drive.google.com/uc?export=download&id=1pZu4vv3ZFWHnKdPcP8vY8VBtlZdhLFUP ')
 
 }
 
@@ -318,11 +319,11 @@ h5 {
     position: absolute;
     top: 0;
     width: 90%;
-    margin-left: 25px;
+    margin-left: 5%;
 }
 
 .greta-bubble .bubble-text{
-    margin-left: 5px;
+    margin-left: 10%;
 }
 
 .bubble-text h5 {
