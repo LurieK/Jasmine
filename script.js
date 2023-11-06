@@ -105,6 +105,20 @@ function animateText(element, text) {
 }
 
 
+const navIcon = document.querySelector('.menu');
+const mobileNav = document.querySelector('.mobile-nav');
+
+navIcon.addEventListener('click', function() {
+    if (mobileNav.style.display === 'block') {
+        mobileNav.style.display = 'none';
+    } else {
+        mobileNav.style.display = 'block';
+    }
+});
+
+
+
+
 
 // // Listen for hover
 // women.forEach(woman => {
@@ -221,17 +235,4 @@ function animateText(element, text) {
 
 // window.addEventListener('scroll', checkPosition);
 // checkPosition(); //run check
-
-
-const navIcon = document.querySelector('.menu');
-const mobileNav = document.querySelector('.mobile-nav');
-
-navIcon.addEventListener('click', function() {
-    if (mobileNav.style.display === 'block') {
-        mobileNav.style.display = 'none';
-    } else {
-        mobileNav.style.display = 'block';
-    }
-});
-
 
