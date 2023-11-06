@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Philly Sans";
-    /* src: url("./philly_sans.woff"); for local use*/
-    src: url('https://drive.google.com/uc?export=download&id=1pZu4vv3ZFWHnKdPcP8vY8VBtlZdhLFUP ')
+    src: url("./philly_sans.woff"); /* for local use */
+    /* src: url('http://whatwashernameagain.com/wp-content/fonts/philly_sans.woff') */
 
 }
 
