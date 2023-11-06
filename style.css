@@ -1,6 +1,7 @@
 @font-face {
-    font-family: "Philly Sans"; 
-    src: url("./philly_sans.woff") ;
+    font-family: "Philly Sans";
+    /* src: url("./philly_sans.woff"); for local use*/
+    src: url('https://drive.google.com/uc?export=download&id=1pZu4vv3ZFWHnKdPcP8vY8VBtlZdhLFUP ')
 
 }
 
@@ -9,7 +10,8 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
-    
+
+
 }
 
 body {
@@ -22,10 +24,17 @@ body {
     padding: 0;
 }
 
-.about-heading, h4,h3, .card-examples, .Jasmine, .artist-text, .donate-text {
+.about-heading,
+h4,
+h3,
+.card-examples,
+.Jasmine,
+.artist-text,
+.donate-text {
     opacity: 0;
-    transition: opacity 1s, transform 1s; 
-    transform: translateY(30px);  /* slide down by 30px initially; adjust as needed */
+    transition: opacity 1s, transform 1s;
+    transform: translateY(30px);
+    /* slide down by 30px initially; adjust as needed */
 }
 
 .header {
@@ -44,7 +53,7 @@ body {
 }
 
 .header h3 {
-    color:#EB5F0A;
+    color: #EB5F0A;
     margin-left: 30px;
     font-size: 2rem;
     font-family: "Philly Sans";
@@ -79,13 +88,35 @@ li {
 }
 
 .mobile-nav {
-    display:none;
+    display: none;
     color: black;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-   
+
+}
+
+@media screen and (min-width: 350px) {
+    .header h3 {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+
+    .menu {
+        display: inline;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+
+}
+
+@media screen and (min-width: 930px) {
+    .menu {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 930px) {
@@ -93,14 +124,14 @@ li {
         display: none;
     }
 
-    .menu {
+    /* .menu {
         display: inline;
         height: 4rem;
         width: 4rem;
         vertical-align: baseline;
         margin-right: 30px;
         margin-top: 20px;
-    }
+    } */
 
     .mobile-nav {
         display: none;
@@ -109,23 +140,22 @@ li {
         top: 100%;
         left: 0;
         width: 100%;
-        
+
     }
 
-   
+
 }
 
 
 h1 {
-    font-family: "Philly Sans"; 
-    font-size: 2rem;
+    font-family: "Philly Sans";
     font-weight: bold;
     text-align: center;
-    
+
 }
 
 h2 {
-    
+
     font-style: italic;
     text-align: center;
     text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.66);
@@ -133,163 +163,219 @@ h2 {
 
 h3 {
     align-self: center;
-    font-family: 'Rubik Mono One', monospace;
+    font-family: 'Hind', sans-serif;
     font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 h4 {
-    
-    font-family: 'Chivo Mono', monospace;
+
+    font-family: 'Courier Prime', monospace;
     margin-right: 10%;
     margin-left: 10%;
     font-size: 20px;
 }
 
 h5 {
-    font-family: 'Chivo Mono', monospace;
+    font-family: 'Courier Prime', monospace;
     font-size: 1rem;
 }
 
 .hero {
     width: 100%;
+    height: 25%;
     display: flex;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 9.5rem;
+    z-index: 2;
+    justify-content: center;
+    flex-flow: column;
 }
 
 .title {
-    background-image: url(./images/background.jpg);
+    background-image: url(./images/background\ \(1\).png);
     background-repeat: no-repeat;
     background-color: #EB5F0A;
     background-position: top;
     background-size: cover;
-    /* position: relative; */
+    transform: translate3d(0,0,0); 
+    backface-visibility: hidden;
+
+    position: relative;
     width: 86%;
     height: 500px;
-    /* padding-top: 10%; */
-    color: white;
     box-shadow: 0 0 5px gray;
-    display: flex;
-    flex-flow: row;
-   
+    align-self: center;
+    justify-self: center;
 
-  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "woman title";
+
+
 }
 
-
-
-/* Container holding images of three women */
-
-.woman-img {
-    position:relative;
-    /* background-color: red; for debugging */
-    padding-bottom: 0;
-    padding-left:0; 
-    left: 0;
-    bottom: 0;
-    width: 50%;
-    height: 100%;
+/*Woman image and bubble styling*/
+.body{
+    width: 90%;
+}
+.woman {
+    display: grid;
+    grid-template-columns: repeat(9, 75px);
+    grid-template-rows: repeat(4, 125px);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: start;
+    /* align-items: end; */
+    z-index: 2;
+    position: absolute;
+    margin-left: -80px;
+    /*for initial animation*/
     opacity: 0; 
     transform: translateX(-100px); 
     transition: opacity 1s, transform 1s;
-
-} 
-
-.woman-img img {
- 
-    padding: 0;
-} 
-
-@keyframes tiltGreta {
-    0%, 100% {
-        transform: rotateZ(0deg);
-    }
-    50% {
-        transform: rotateZ(5deg); 
-    }
+    
+    
 }
 
-.woman-img img:first-child {
+.lux,
+.rosa,
+.greta,
+.lux-bubble-container,
+.rosa-bubble-container,
+.greta-bubble-container {
+    object-fit: contain;
+    /* Ensures image covers the entire grid cell without distorting the aspect ratio */
+    object-position: top;
+    /* Centers the image within its container */
+    max-width: 100%;
+    /* Ensures the image doesn't grow beyond its grid cell */
+    height: 100%;
+}
+
+.lux {
+    grid-area: 3 / 6 / 5 / 9;
+
+}
+
+.rosa {
+    grid-area: 2 / 5/ 4 / 8;
+
+}
+
+.greta {
+    grid-area: 3 / 3 / 5 / 6;
+
+}
+
+.lux-bubble-container {
+    grid-area: 2 / 7 / 4 / 10;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    position: relative
+}
+
+.rosa-bubble-container {
+    grid-area: 1 / 6 / 3 / 9;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+
+    position: relative;
+
+}
+
+.greta-bubble-container {
+    grid-area: 2 / 1 / 4 / 4;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    position: relative;
+
+}
+
+.greta-bubble,
+.rosa-bubble,
+.lux-bubble {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.bubble-text {
+    grid-area: 1 / 1 / 2 / 2;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 85%;
-    z-index: 2;
+    top: 0;
+    width: 90%;
+    margin-left: 5%;
 }
 
-@keyframes tiltRosa {
-    0%, 100% {
-        transform: rotateZ(0deg);
-    }
-    50% {
-        transform: rotateZ(-5deg); 
-    }
-   
+.greta-bubble .bubble-text{
+    margin-left: 10%;
 }
 
+.bubble-text h5 {
+    z-index: 6;
+    color: black;
+    opacity: 0;
+    margin-left: 20px
+}
 
-.woman-img img:nth-child(2) {
-    position: absolute;
-    bottom: 20%;
-    left: 17%;
-    width: 85%;
+/*Title text styling */
+
+.title-text {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 150px);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "."
+        "hero-text"
+        "."
+        "order-link"
+        ".";
+    grid-area: title;
+    align-items: end;
     z-index: 1;
-}
-
-@keyframes tiltLux {
-    0%, 100% {
-        transform: rotateZ(0deg);
-    }
-    50% {
-        transform: rotateZ(-5deg); 
-    }
-}
-
-
-.woman-img img:nth-child(3) {
     position: absolute;
-    bottom: 0;
-    left: 40%;
-    width: 83%;
-    z-index: 3;
-}
-
-.greta.startTilt {
-    animation: tiltGreta 1s infinite;
-}
-
-.rosa.startTilt {
-    animation: tiltRosa 1s infinite;
-}
-
-.lux.startTilt {
-    animation: tiltLux 1s infinite;
 }
 
 
-.title-text{
-    display:flex;
-    flex-flow: column;
-    width: 75%;
-    justify-content: space-around;
-    /* padding-top: 10%; */
-    /* margin-left: 30%; */
 
+.order-link {
+    grid-area: 3/2/3/3;
 }
 
 .hero-text {
     color: #FFD52D;
     text-shadow: 10px 8px black;
-    font-size: 6rem;
+    font-size: 3rem;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 20px;
-    
+    align-items: start;
+    text-align: center;
+    grid-area: 1/1/3/4;
+
 }
 
 .order-link {
     background: white;
     align-self: center;
+    text-align: center;
     font-size: 22px;
     line-height: 22px;
     padding: 15px;
@@ -298,68 +384,220 @@ h5 {
     font-family: 'Philly Sans';
     text-decoration: none;
     box-shadow: 10px 8px black;
+
 }
 
 .order-link a {
     color: black;
     text-decoration: none;
-   
+
+
 }
 
-@media screen and (max-width: 960px) {
+
+/*mobile*/
+@media screen and (min-width: 250px) and (max-width: 900px) {
+    .title{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "woman"
+        "title";
+        height: 625px;
+    }
+
+
+    .woman{
+        grid-template-columns: repeat(11, 35px);
+        grid-template-rows: repeat(4, 85px);
+        margin-left: -30px;
+        margin-right: -30px;
+        /* margin-top: -80px; */
+        justify-self: center;
+
+    }
+
+
+    .title-text {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+           'hero-text'
+            'order-link';
+    }
+
     .hero-text{
-
+        grid-area: hero-text;
+        font-size: 2rem;
+        margin-bottom: 0;
+        align-self: center;
+        justify-self: center;
+        margin-right:15px;
+        margin-left:15px;
     }
+
+    .hero-text h1{
+        margin:0;
+    }
+
+    .order-link{
+        grid-area: order-link;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .lux-bubble-container,
+    .rosa-bubble-container,
+    .greta-bubble-container{
+        object-fit: contain;
+    }
+
+    .rosa-bubble-container{
+       
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 75%;
+        grid-column-start: 7 ;
+        grid-column-end: 12;
+        width: 100%;
+        align-items: start;
+        
+    }
+
+    .rosa {
+        grid-area: 2 / 6/ 4 / 9;
+    }
+
+    .greta-bubble-container{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 75%;
+        grid-column-end: 6;
+        width: 95%;
+        align-items: start;
+    }
+    
+    .greta{
+        grid-area: 3/4/5/7;
+    }
+
+    .lux {
+        grid-area: 3/7/5/10;
+        
+    }
+
+    .bubble-text{
+        margin-left: 0;
+    }
+    .lux-bubble-container{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        height: 100%;
+        grid-column-end: 12;
+        width: 100%;
+        align-items: start;
+    }
+
+    .donate-btn{
+        width: 30%;
+    }
+
 }
 
-@media screen and (max-width: 850px) {
-    .title {
-        display:flex;
-        flex-flow: column;
-        justify-content: center;
-        background-color: #EB5F0A;
-        padding-bottom: 10%;
-        margin-top:10%;
-    
-    }
 
-   .woman-img {
-        align-self: center;
-        margin-right: 10%;
-   }
+
+
+/*tablet*/
+
+ @media screen and (min-width: 760px) and (max-width: 900px) {
+    .title{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "woman"
+        "title";
+        height: 725px;
+    }
+    
+    .woman {
+        grid-template-columns: repeat(11, 70px);
+        grid-template-rows: repeat(4, 100px);
+        margin-top:-30px;
+        justify-self: center;
+        width: fit-content
+    }
 
     .title-text{
-        font-size: 3rem;
-        align-self: center;
-        
-    
+        padding-top: 30px;
+    }
+    .hero-text h1{
+        margin:0;
     }
 
-    .hero-text {
-        font-size: 3rem;
-        margin-top:0;
+    .greta-bubble-container{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 5;
     }
+
+    .lux-bubble-container{
+        grid-area: 2/8/3/11;
+    }
+
+    .rosa-bubble-container{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 7;
+        grid-column-end: 10;
+        
+    }
+
+    .bubble-text{
+        margin-left: 10px;
+        top: 2px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width:920px) {
+    .woman {
+        grid-template-columns: repeat(11, 70px);
+        grid-template-rows: repeat(6, 100px);
+        margin-top:-30px;
+        
+    }
+
     
 }
+@media screen and (min-width: 910px) {
+    .hero-text h1{
+        margin:0;
+    }
+}
+
 
 /* Card examples  */
 
-.about{
-    display:flex;
+.about {
+    display: flex;
     justify-content: center;
     flex-flow: column;
     width: 100%;
 
 }
 
-.about-heading{
+
+
+.about-heading {
     font-family: "Philly Sans";
     font-size: 4rem;
     padding-bottom: 20px;
-    
+
 }
 
-.about-text{
+.about-text {
     background-color: #d7e4f9;
     align-self: center;
     padding: 10px;
@@ -368,6 +606,12 @@ h5 {
     padding: 40px;
     box-shadow: 10px 8px black;
     width: 80%
+}
+
+@media screen and (min-width: 250px) {
+    .about-text{
+        width: 70%;
+    }
 }
 
 .cards {
@@ -400,11 +644,21 @@ h5 {
     align-self: center;
     padding: 10px;
     position: relative;
-    border: 10px solid white; 
-    border-radius: 0; 
+    border: 10px solid white;
+    border-radius: 0;
     padding: 10px;
 
-   
+
+}
+
+@media screen and (min-width: 1550px) {
+
+    .Activism,
+    .Science,
+    .Goddesses,
+    .Art {
+        width: 60%;
+    }
 }
 
 .Activism::before,
@@ -426,11 +680,11 @@ h5 {
     background-color: #df9ac1;
 }
 
-.Science{
+.Science {
     background-color: #ffd52d;
 }
 
-.Goddesses{
+.Goddesses {
     background-color: #b90d0d;
 }
 
@@ -444,6 +698,7 @@ h5 {
     justify-content: center;
     flex-flow: row;
 }
+
 .card1-Activism,
 .card1-Science,
 .card1-Goddesses,
@@ -451,14 +706,15 @@ h5 {
 .card2-Activism,
 .card2-Science,
 .card2-Goddesses,
-.card2-Art{
+.card2-Art {
     z-index: 2;
-    perspective: 1500px; 
-    width: 300px; 
+    perspective: 1500px;
+    width: 300px;
     height: 300px;
     position: relative;
-    margin: 0 20px 20px 0; /* Added margin for spacing between cards */
-    display: inline-block; 
+    margin: 0 20px 20px 0;
+    /* Added margin for spacing between cards */
+    display: inline-block;
 }
 
 
@@ -466,26 +722,26 @@ h5 {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     transition: transform 0.7s;
 }
 
 .back {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 .card1-Activism:hover .front,
 .card1-Science:hover .front,
 .card1-Goddesses:hover .front,
-.card1-Art:hover .front{
-    transform: rotateY(180deg); 
+.card1-Art:hover .front {
+    transform: rotateY(180deg);
 }
 
 .card1-Activism:hover .back,
 .card1-Science:hover .back,
 .card1-Goddesses:hover .back,
-.card1-Art:hover .back{
-    transform: rotateY(360deg); 
+.card1-Art:hover .back {
+    transform: rotateY(360deg);
 }
 
 .card2-Activism:hover .front,
@@ -498,23 +754,24 @@ h5 {
 .card2-Activism:hover .back,
 .card2-Science:hover .back,
 .card2-Goddesses:hover .back,
-.card2-Art:hover .back{
-    transform: rotateY(360deg); 
+.card2-Art:hover .back {
+    transform: rotateY(360deg);
 }
 
 .card-face img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
+
 @media screen and (max-width: 850px) {
-    .about-heading{
+    .about-heading {
         font-size: 3rem;
         padding-top: 20px;
         padding-bottom: 20px;
         margin-left: 10%;
         margin-right: 10%;
-        
+
     }
 
     .card-examples {
@@ -528,6 +785,28 @@ h5 {
     }
 }
 
+@media screen and (min-width: 350px) {
+    .card-face img {
+        width: 75%;
+        object-fit: contain;
+    }
+
+    .card-face {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card1-Activism,
+    .card1-Science,
+    .card1-Goddesses,
+    .card1-Art,
+    .card2-Activism,
+    .card2-Science,
+    .card2-Goddesses,
+    .card2-Art {
+        margin: 0;
+    }
+}
 
 .artist {
     display: flex;
@@ -539,8 +818,9 @@ h5 {
     background-color: #b90d0d;
     box-shadow: 10px 8px black;
 }
+
 .artist-text h1 {
-    color:#FFD52D;
+    color: #FFD52D;
     text-shadow: 10px 8px black;
     font-size: 60px;
 }
@@ -561,7 +841,7 @@ h5 {
 }
 
 @media only screen and (max-width: 850px) {
-  
+
     .artist-text {
         width: 100%;
         display: flex;
@@ -578,7 +858,7 @@ h5 {
 
     .Jasmine {
         display: none;
-        
+
     }
 
     .artist-text h4 {
@@ -618,29 +898,32 @@ h5 {
 .donate-btn {
     background-color: #df9ac1;
     width: 20%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     align-self: center;
     padding: 10px;
     border: 5px solid white;
     border-radius: 0;
     padding: 20px;
     font-family: "Philly Sans";
+    font-size: 20px;
     box-shadow: 10px 8px black;
-    
+
 }
 
 
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 850px) {
 
-    .donate-text h3{
+    .donate-text h3 {
         font-size: 2rem;
         text-align: center;
+        
     }
 
-    .donate-btn{
+    .donate-btn {
         padding: 10px;
         box-shadow: 8px 6px black;
-    
+        width:40%;
+
     }
 }
